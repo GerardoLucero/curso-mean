@@ -1,9 +1,11 @@
 'use strinct'
-
+var fs = require('fs');
+var path = require('path');
 var User = require('../models/user')
 var bcrypt =require('bcrypt-nodejs')
 const dd = require('dump-die')
 var jwt = require('../services/jwt');
+
 
 function pruebas(req, res){
 	res.status(200).send({
@@ -133,10 +135,24 @@ function uploadImage(req, res){
 	}
 }
 
+function getImageFile(req, res){
+	var imageFile = req.params.imageFile;
+	var path_File = './uploads/users/'+imageFile;
+	fs.exists(path_File, function(exists){
+		if(exists){
+			res.sendFile(path.resolve(path_File));
+		}
+		else{
+			res.status(200).send({message: 'No existe la imagen'});
+		}
+	});
+}
+
 module.exports = {
 	pruebas,
 	saveUser,
 	loginUser,
 	updateUser, 
-	uploadImage
+	uploadImage,
+	getImageFile
 };
