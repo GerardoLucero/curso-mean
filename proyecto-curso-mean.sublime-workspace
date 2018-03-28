@@ -116,75 +116,21 @@
 	"buffers":
 	[
 		{
-			"file": "index.js",
-			"settings":
-			{
-				"buffer_size": 387,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "models/user.js",
-			"settings":
-			{
-				"buffer_size": 273,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 2109,
+				"buffer_size": 2089,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "middlewares/authenticated.js",
+			"contents": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b6953e5741eaecca'\nwhere user_login = 'WZADMIN'",
 			"settings":
 			{
-				"buffer_size": 681,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "services/jwt.js",
-			"settings":
-			{
-				"buffer_size": 393,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/user.js",
-			"settings":
-			{
-				"buffer_size": 378,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "models/artist.js",
-			"settings":
-			{
-				"buffer_size": 225,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 305,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 95,
+				"line_ending": "Windows",
+				"name": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b"
 			}
 		}
 	],
@@ -246,8 +192,15 @@
 	],
 	"file_history":
 	[
-		"/C/version5.00GerA/Version5.00/WinSocCloud/WinSocCloud/mockdata/Strings.json",
 		"/C/wamp64/www/curso-mean/app.js",
+		"/C/wamp64/www/curso-mean/models/artist.js",
+		"/C/wamp64/www/curso-mean/routes/user.js",
+		"/C/wamp64/www/curso-mean/services/jwt.js",
+		"/C/wamp64/www/curso-mean/middlewares/authenticated.js",
+		"/C/wamp64/www/curso-mean/controllers/user.js",
+		"/C/wamp64/www/curso-mean/models/user.js",
+		"/C/wamp64/www/curso-mean/index.js",
+		"/C/version5.00GerA/Version5.00/WinSocCloud/WinSocCloud/mockdata/Strings.json",
 		"/C/wamp64/www/curso-mean/models/album.js",
 		"/C/wamp64/www/curso-mean/package-lock.json",
 		"/C/wamp64/www/curso-mean/package.json",
@@ -366,14 +319,7 @@
 		"/C/laragon/www/restaurante/public/css/app.css",
 		"/C/laragon/www/blog/app/Http/Middleware/VerifyCsrfToken.php",
 		"/C/laragon/www/blog/resources/views/saludo.blade.php",
-		"/C/laragon/www/blog/resources/views/errors/404.blade.php",
-		"/C/laragon/www/blog/storage/framework/views/e1fe996414f66af222f593d1b358b064880b2443.php",
-		"/C/laragon/www/blog/storage/framework/views/8b7b00227ff8bda7062e6eb3bc209f5e378f5c37.php",
-		"/C/laragon/www/blog/storage/framework/views/a9ce12e2a29e4635d326aa8f36a72a3c3b472aba.php",
-		"/C/laragon/www/blog/storage/framework/views/dbc431e905c3ae75acc8d9e6c85833cd28d7fe33.php",
-		"/C/laragon/www/blog/app/Http/Middleware/Example.php",
-		"/C/laragon/www/blog/resources/views/contactos.blade.php",
-		"/C/laragon/www/blog/resources/views/home.blade.php"
+		"/C/laragon/www/blog/resources/views/errors/404.blade.php"
 	],
 	"find":
 	{
@@ -455,238 +401,65 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 387,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								108,
-								112
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "models/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								219,
-								219
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "controllers/user.js",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2109,
+						"buffer_size": 2089,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								119,
-								119
+								1078,
+								1078
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 458.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "middlewares/authenticated.js",
+					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 681,
+						"buffer_size": 95,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								550,
-								550
+								95,
+								0
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"auto_name": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b",
+							"default_dir": "C:\\wamp64\\www\\curso-mean",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 28.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "services/jwt.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								352,
-								352
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "routes/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								155,
-								155
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "models/artist.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 225,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								225,
-								225
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								305,
-								305
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1117,7 +890,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 198.0,
+	"side_bar_width": 202.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
