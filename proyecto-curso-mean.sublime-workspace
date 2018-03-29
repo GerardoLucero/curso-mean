@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"ima",
+				"imageFile"
+			],
+			[
 				"user",
-				"user"
+				"userUpdated"
+			],
+			[
+				"fin",
+				"findByIdAndUpdate"
+			],
+			[
+				"file",
+				"file_ext"
+			],
+			[
+				"fil",
+				"file_split"
 			],
 			[
 				"U",
@@ -119,18 +135,38 @@
 			"file": "controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 2089,
+				"buffer_size": 3717,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b6953e5741eaecca'\nwhere user_login = 'WZADMIN'",
+			"file": "routes/user.js",
 			"settings":
 			{
-				"buffer_size": 95,
-				"line_ending": "Windows",
-				"name": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b"
+				"buffer_size": 724,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "middlewares/authenticated.js",
+			"settings":
+			{
+				"buffer_size": 677,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "'use strinct'\nvar jwt = require('jwt-simple');\nvar moment = require('moment');\nvar secret = 'Clave_secreta';\n\nexports.createToken = function(user){\n\tvar payload = {\n\t\tsub: user._id,\n\t\tname: user.name,\n\t\tsurname: user.surname,\n\t\temail: user.email,\n\t\trole: user.role,\n\t\timage: user.image,\n\t\tiat: moment().unix(),\n\t\texp: moment().add(30, 'days').unix\n\t};\n\treturn jwt.encode(payload, secret);\n};\n",
+			"file": "services/jwt.js",
+			"file_size": 412,
+			"file_write_time": 131663195509269446,
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -188,10 +224,13 @@
 		"/C/wamp64/www/curso-mean/controllers",
 		"/C/wamp64/www/curso-mean/middlewares",
 		"/C/wamp64/www/curso-mean/routes",
-		"/C/wamp64/www/curso-mean/services"
+		"/C/wamp64/www/curso-mean/services",
+		"/C/wamp64/www/curso-mean/uploads",
+		"/C/wamp64/www/curso-mean/uploads/users"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/curso-mean/node_modules/color-convert/route.js",
 		"/C/wamp64/www/curso-mean/app.js",
 		"/C/wamp64/www/curso-mean/models/artist.js",
 		"/C/wamp64/www/curso-mean/routes/user.js",
@@ -318,8 +357,7 @@
 		"/C/laragon/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
 		"/C/laragon/www/restaurante/public/css/app.css",
 		"/C/laragon/www/blog/app/Http/Middleware/VerifyCsrfToken.php",
-		"/C/laragon/www/blog/resources/views/saludo.blade.php",
-		"/C/laragon/www/blog/resources/views/errors/404.blade.php"
+		"/C/laragon/www/blog/resources/views/saludo.blade.php"
 	],
 	"find":
 	{
@@ -401,24 +439,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "controllers/user.js",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2089,
+						"buffer_size": 3717,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1078,
-								1078
+								3155,
+								3155
 							]
 						],
 						"settings":
@@ -427,39 +465,96 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 458.0,
+						"translation.y": 1912.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "routes/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								95,
-								0
+								687,
+								699
 							]
 						],
 						"settings":
 						{
-							"auto_name": "UPDATE wp_users SET user_pass = '3411f6d521ed0d17b",
-							"default_dir": "C:\\wamp64\\www\\curso-mean",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "middlewares/authenticated.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								568,
+								568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "services/jwt.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								13
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -513,6 +608,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"route",
+				"node_modules\\color-convert\\route.js"
+			],
 			[
 				"web",
 				"WinSocCloud\\routes\\web.php"
@@ -890,7 +989,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 202.0,
+	"side_bar_width": 378.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
