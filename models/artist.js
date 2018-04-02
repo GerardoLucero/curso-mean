@@ -1,12 +1,12 @@
 'use strict'
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+  var mongoose = require('mongoose');
+  var Schema = mongoose.Schema;
 
-var ArtistSchema = Schema({
+var ArtistSchema = new Schema({
 	name: String,
 	description: String, 
 	image: String
 });
 
-mongoose.exports = mongoose.model('Artist', ArtistSchema);
+module.exports = mongoose.model('Artist', ArtistSchema);

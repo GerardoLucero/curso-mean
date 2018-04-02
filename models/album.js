@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var AlbumSchema = Schema({
+var AlbumSchema = new Schema({
 	name: String,
 	surname: String, 
 	email: String,
@@ -12,4 +12,4 @@ var AlbumSchema = Schema({
 	image: String
 });
 
-mongoose.exports = mongoose.model('Album', AlbumSchema);
+module.exports = mongoose.model('Album', AlbumSchema);

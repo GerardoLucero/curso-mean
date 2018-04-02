@@ -1,9 +1,9 @@
 'use strinct'
 var fs = require('fs');
 var path = require('path');
-var User = require('../models/user')
-var bcrypt =require('bcrypt-nodejs')
-const dd = require('dump-die')
+var User = require('../models/user');
+var bcrypt =require('bcrypt-nodejs');
+const dd = require('dump-die');
 var jwt = require('../services/jwt');
 
 
