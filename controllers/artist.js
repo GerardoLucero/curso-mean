@@ -8,7 +8,22 @@ var Song = require('../models/song');
 const dd = require('dump-die');
 
 function getArtist(req, res){
-	res.status(200).send({message: 'Metodo getArtist del controlador artist.js'});	
+	var artisId = req.params.id;
+
+	Artist.findById(artisId, (err, artist) =>{
+		if(err){
+			res.status(500).send({message: 'Error ene la petición'});
+		}
+		else{
+			if(!artist){
+				res.status(404).send({message: 'El artista no existe'});
+			}
+			else{
+				res.status(200).send({artist});	
+			}
+		}
+	});
+	
 }
 
 
