@@ -57,7 +57,6 @@ function getArtists(req, res){
 
 }
 
-
 function saveArtist(req, res){
 	var artist = new Artist();
 	var params = req.body;
