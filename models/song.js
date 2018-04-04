@@ -2,11 +2,15 @@
 
   var mongoose = require('mongoose');
   var Schema = mongoose.Schema;
+  var Album = require('../models/album');
 
 var SongSchema = new Schema({
-	name: String,
-	description: String, 
-	image: String
+	number: String,
+	name: String, 
+	duration: String,
+	file: String,
+	album: [{type: Schema.Types.ObjectId, ref: 'Album'}]
+
 });
 
 module.exports = mongoose.model('Song', SongSchema);
