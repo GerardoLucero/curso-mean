@@ -1,15 +1,14 @@
 'use strict'
 var path = require('path');
 var fs = require('fs');
-var mongoosePaginate = require('mongoose-pagination');
- var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var Song = require('../models/song');
 const dd = require('dump-die');
 
 function getSong(req, res){
 	var songId = req.params.id;
 
-	Song.findById(songId).populate('artist').exec((err, song) =>{
+	Song.findById(songId).populate('album').exec((err, song) =>{
 		if(err){
 			res.status(500).send({message: err});
 		}else{
@@ -23,26 +22,31 @@ function getSong(req, res){
 	});
 }
 function getSongs(req, res){
-	// var artistId = req.params.artist;
-	// if(!artistId){
-	// 	//Sacar todos los songs
-	// 	var find = Song.find({}).sort('name');
-	// }
-	// else{
-	// 	var find = Song.find({artist: artistId}).sort('name');		
-	// }
-	// find.populate('artist').exec((err, songs) =>{
-	// 	if(err){
-	// 		res.status(500).send({message: err});
-	// 	}else{
-	// 		if(!songs){
-	// 		res.status(404).send({message: 'La cancion no existe'});
-	// 	}
-	// 		else{
-	// 			res.status(200).send({songs});
-	// 		}
-	// 	}
-	// });
+	var albumId = req.params.album;
+	if(!albumId){
+		//Sacar todos los songs
+		var find = Song.find({}).sort('number');
+	}
+	else{
+		var find = Song.find({album: albumId}).sort('number');		
+	}
+	find.populate({path: 'album', 
+					populate: {
+					path: 'artist',
+					model: 'Artist'
+					}
+				}).exec((err, songs) =>{
+		if(err){
+			res.status(500).send({message: err});
+		}else{
+			if(!songs){
+			res.status(404).send({message: 'La cancion no existe'});
+		}
+			else{
+				res.status(200).send({songs});
+			}
+		}
+	});
 }
 
 
@@ -95,13 +99,13 @@ function updateSong(req, res){
 function deleteSong(req,res){
 	var songId = req.params.id;
 
-	Song.findByIdAndRemove( songId, (err, songRemoved) =>{
+	Song.findByIdAndRemove(songId, (err, songRemoved) =>{
 		if(err){
 			res.status(500).send({message: 'Error al eliminar la cancion'});	
 		}
 		else{
 			if(!songRemoved){
-				res.status(404).send({message: 'El cancion no ha sido eliminado'});	
+				res.status(404).send({message: 'La cancion no ha sido eliminado'});	
 			}
 			else{
 				res.status(200).send({songRemoved});	
@@ -111,24 +115,22 @@ function deleteSong(req,res){
 
 }
 
-function uploadImage(req, res){
+function uploadFile(req, res){
+
 	var songId = req.params.id;
 	var file_name = 'No subido...';
-
 	if(req.files){
-		var file_path = req.files.image.path;
+		var file_path = req.files.file.path;
 		var file_split = file_path.split('\\');
 		var file_name = file_split[2];
 
 		var ext_split = file_name.split('\.');
 		var file_ext = ext_split[1];
-		console.log(file_name);
-		console.log(file_ext);
 
-		if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif'){
-			Song.findByIdAndUpdate(songId, {image: file_name}, (err, songUpdated) =>{
+		if(file_ext == 'mp3' || file_ext == 'ogg' ){
+			Song.findByIdAndUpdate(songId, {file: file_name}, (err, songUpdated) =>{
 				if(err){
-					res.status(404).send({message: 'Error al actualizar la imagen'});
+					res.status(404).send({message: 'Error al actualizar la cancion'});
 				}
 				else{
 					res.status(200).send({song: songUpdated});
@@ -139,21 +141,21 @@ function uploadImage(req, res){
 			res.status(200).send({message: 'Extension del archivo no valida'});
 		}
 	}else{
-		res.status(200).send({message: 'No ha subido ninguna imagen'});
+		res.status(200).send({message: 'No ha subido ninguna la cancion'});
 	}
 
 }
 
 
-function getImageFile(req, res){
-	var imageFile = req.params.imageFile;
-	var path_File = './uploads/song/'+imageFile;
+function getSongFile(req, res){
+	var file = req.params.file;
+	var path_File = './uploads/songs/'+file;
 	fs.exists(path_File, function(exists){
 		if(exists){
 			res.sendFile(path.resolve(path_File));
 		}
 		else{
-			res.status(200).send({message: 'No existe la imagen'});
+			res.status(200).send({message: 'No existe la cancion'});
 		}
 	});
 }
@@ -163,7 +165,6 @@ module.exports = {
 	getSongs,
 	updateSong,
 	deleteSong,
-	uploadImage,
-	getImageFile
-
+	uploadFile,
+	getSongFile
 };
