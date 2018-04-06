@@ -52,36 +52,42 @@ function saveUser(req, res){
 
 function loginUser(req, res){
 	var params = req.body;
+	console.log(params);
 	var email = params.email;
 	var password = params.password;
-	User.findOne({email: email.toLowerCase()}, (err, user) =>{
-		if(err){
-			res.status(500).send({menssage: 'Error en la petición'});
-		}else{
-			if(!user){
-				res.status(404).send({message: 'El usuario no existe'})
-			}
-			else{
-				bcrypt.compare(password, user.password, function(err, check){
-					if(check){
-						//Devolver datos del usuario logueado
-						if(params.gethash){
-							//Devuelve token jwt
-							res.status(200).send({
-								token: jwt.createToken(user)
-							});
+	if(email != ""){
+			User.findOne({email: email.toLowerCase()}, (err, user) =>{
+			if(err){
+				res.status(500).send({menssage: 'Error en la petición'});
+			}else{
+				if(!user){
+					res.status(404).send({message: 'El usuario no existe'})
+				}
+				else{
+					bcrypt.compare(password, user.password, function(err, check){
+						if(check){
+							//Devolver datos del usuario logueado
+							if(params.gethash){
+								//Devuelve token jwt
+								res.status(200).send({
+									token: jwt.createToken(user)
+								});
+							}
+							else{
+								res.status(200).send({hola: user});
+							}
 						}
 						else{
-							res.status(200).send({hola: user});
+							res.status(404).send({message: 'Los datos son incorrectos'});
 						}
-					}
-					else{
-						res.status(404).send({message: 'Los datos son incorrectos'});
-					}
-				});
+					});
+				}
 			}
-		}
-	});
+		});
+	}
+	else{
+		res.status(500).send({menssage: 'email vacio'});
+	}
 }
 
 function updateUser(req, res){
