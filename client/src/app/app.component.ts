@@ -12,11 +12,8 @@ export class AppComponent  implements OnInit{
   public identity = false;
   public token; 
 
-  constructor(private _userService: UserService
-  	){
+  constructor(private _userService: UserService){
   	this.user = new User('','','','','','ROLE_USER','');
-
-
   }
 
   ngOnInit(){

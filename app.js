@@ -23,6 +23,7 @@ app.use((req, res, next) =>{
 });
 
 //Cargar rutas 
+
 app.use('/api', user_routes);
 app.use('/api', artist_routes);
 app.use('/api', album_routes);

@@ -8,8 +8,9 @@
 <div class="clearfix">
 	  	
 </div>
-<div class="col-lg-12">
-	<div class="col-lg-6">
+<div class="col-md-12" *ngIf="!identity">
+	<div class="col-md-6">
+		
 	 	<div class="container">
 	        <div class="card card-container">
 	        	<legend>Identificate</legend>
@@ -36,15 +37,15 @@
 
 
 
-	<div class="col-lg-6">
+	<div class="col-md-6">
 	    <div class="card card-container ">
 	        <form action="" method="POST" role="form">
-	        	<legend>Registrarse</legend>
+	        	<legend>Registrate</legend>
 	        
 	        	<div class="form-group">
 	        		<label for="">Nombre</label>
 	        		<input id="idName" type="text" class="form-control"  placeholder="Nombre">
-	        		<label for="">Apellido</label>
+	        		<label for="">Apellidos</label>
 	        		<input id="idSurname" type="text" class="form-control"  placeholder="Apellido">
 	        		<label for="">Email</label>
 	        		<input id="idEmail" type="text" class="form-control"  placeholder="Email">
