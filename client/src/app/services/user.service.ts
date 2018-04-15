@@ -15,7 +15,6 @@ export class UserService{
 
 	singup(user_to_login, gethash = null){
 		
-
 		if(gethash != null){
 			user_to_login.gethash = gethash;
 		}
