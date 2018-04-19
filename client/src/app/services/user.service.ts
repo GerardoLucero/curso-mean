@@ -19,9 +19,12 @@ export class UserService{
 		if(gethash != null){
 			user_to_login.gethash = gethash;
 		}
-		let json = JSON.stringify(user_to_login);
-		var params = json;
-		let headers = new Headers({'Content-Type': 'aplication/json'});
+		//let json = JSON.stringify(user_to_login);
+		//var params = json;
+		var params = user_to_login
+		console.log(params);
+		//let headers = new Headers({'Content-Type': 'aplication/json'});
+		let headers = new Headers({'Content-Type': 'application/json; charset=UTF-8'});
 		return this._http.post(this.url+'login', params, {headers: headers})	
 					.map(res => res.json());
 	}

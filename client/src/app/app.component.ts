@@ -13,18 +13,17 @@ export class AppComponent  implements OnInit{
   public token; 
 
   constructor(private _userService: UserService){
-  	this.user = new User('','','','','','ROLE_USER','');
+  	this.user = new User("","","","","","ROLE_USER","");
   }
 
   ngOnInit(){
   }
 
   public onSubmit(){
-  	console.log(this.user);
-
+    
   	this._userService.singup(this.user).subscribe(
   		response =>{
-  			//console.log(response);
+  			console.log(response);
   		},
   		error =>{
   			var erroMessage = <any>error;
