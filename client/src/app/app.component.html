@@ -10,7 +10,11 @@
 </div>
 <div class="col-md-12" *ngIf="!identity">
 	<div class="col-md-6">
-		
+		<div *ngIf="errorMessage" >
+			<div class="alert alert-info">
+			  <strong>Error</strong> {{errorMessage}}
+			</div>
+		</div>
 	 	<div class="container">
 	        <div class="card card-container">
 	        	<legend>Identificate</legend>

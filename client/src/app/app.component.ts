@@ -11,6 +11,7 @@ export class AppComponent  implements OnInit{
   public user: User;
   public identity = false;
   public token; 
+  public errorMessage;
 
   constructor(private _userService: UserService){
   	this.user = new User("","","","","","ROLE_USER","");
@@ -24,11 +25,14 @@ export class AppComponent  implements OnInit{
   	this._userService.singup(this.user).subscribe(
   		response =>{
   			console.log(response);
+        let identity = response.user;
+        this.identity = identity;
   		},
   		error =>{
-  			var erroMessage = <any>error;
-  			if(erroMessage != null){
-  				console.log(error);
+  			var errorMessage = <any>error;
+  			if(errorMessage != null){
+          var body = JSON.parse(error._body):
+          this.errorMenssage
   			}
   		}
   	);
