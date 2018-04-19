@@ -3,6 +3,13 @@
   <h1 class="text-center">
     {{title}}
   </h1>  
+  <span> 
+  	{{ identity.name}} {{ identity.surname}}
+  </span>
+
+  <span class="btn btn-warning" (click)="logout()" >
+  		Cerrar sesíon
+  </span>
  
 </div>
 <div class="clearfix">

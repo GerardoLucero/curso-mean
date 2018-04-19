@@ -9,7 +9,7 @@ import { UserService } from './services/user.service';
 export class AppComponent  implements OnInit{
   public title = 'Songlify';
   public user: User;
-  public identity = false;
+  public identity;
   public token; 
   public errorMessage;
 
@@ -18,7 +18,14 @@ export class AppComponent  implements OnInit{
   }
 
   ngOnInit(){
+    this.identity = this._userService.getIdentity();
+    this.token = this._userService.getToken();
+    console.log(this.identity);
+    console.log(this.token);
+
   }
+
+
 
   public onSubmit(){
     //Datos de usuario
@@ -29,11 +36,13 @@ export class AppComponent  implements OnInit{
         this.identity = identity;
 
         if(this.identity._id == ""){
-          alert("El usuario no esta identificado correctamente");
-              }else{
+                alert("El usuario no esta identificado correctamente");
+              }
+              else{
                 //Localstorage save sesion
+                localStorage.setItem('identity', JSON.stringify(identity));
                 //Conseguir el Token
-              this._userService.singup(this.user, 'true').subscribe(
+                this._userService.singup(this.user, 'true').subscribe(
                 response =>{
                   let token = response.token;
                   this.token = token;
@@ -41,6 +50,7 @@ export class AppComponent  implements OnInit{
                   if(this.token <= 0){
                     alert("El token no se ha generado correctamente");
                   }else{
+                     localStorage.setItem('token', token);
                      console.log(token);
                      console.log(identity);
                   }
@@ -65,5 +75,14 @@ export class AppComponent  implements OnInit{
            			}
   		}
   	);
+  }
+
+  public logout(){
+    localStorage.removeItem('identity');
+    localStorage.removeItem('token');
+    localStorage.clear();
+
+    this.identity = null;
+    this.token = null;
   }
 }
