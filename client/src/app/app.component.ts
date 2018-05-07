@@ -9,12 +9,14 @@ import { UserService } from './services/user.service';
 export class AppComponent  implements OnInit{
   public title = 'Songlify';
   public user: User;
+  public user_register: User;
   public identity;
   public token; 
   public errorMessage;
 
   constructor(private _userService: UserService){
   	this.user = new User("","","","","","ROLE_USER","");
+    this.user_register = new User("","","","","","ROLE_USER","");
   }
 
   ngOnInit(){
@@ -84,5 +86,9 @@ export class AppComponent  implements OnInit{
 
     this.identity = null;
     this.token = null;
+  }
+
+  public onSubmitRegister(){
+    console.log(this._userService);
   }
 }

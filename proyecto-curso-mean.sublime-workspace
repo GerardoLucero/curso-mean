@@ -183,39 +183,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "client/src/app/app.component.html",
-			"settings":
-			{
-				"buffer_size": 2385,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/src/app/app.component.ts",
-			"settings":
-			{
-				"buffer_size": 804,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/src/app/services/user.service.ts",
-			"settings":
-			{
-				"buffer_size": 683,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/services/global.ts",
-			"settings":
-			{
-				"buffer_size": 75,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -267,23 +234,29 @@
 	},
 	"expanded_folders":
 	[
+		"/C/wamp64/www/curso-mean",
+		"/C/wamp64/www/curso-mean/api",
 		"/C/wamp64/www/curso-mean/client",
 		"/C/wamp64/www/curso-mean/client/src",
 		"/C/wamp64/www/curso-mean/client/src/app",
+		"/C/wamp64/www/curso-mean/client/src/app/models",
 		"/C/wamp64/www/curso-mean/client/src/app/services"
 	],
 	"file_history":
 	[
+		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Stored Procedures/Consulta de productos/CLOUD_LEE_CPROD_PRODUCTO.sql",
+		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Stored Procedures/Consulta de productos/CLOUD_LEE_PRODUCTO.sql",
 		"/C/version5.00GerA/Version5.00/WinSocCloud/WinSocCloudDatos/Procedimientos/SP_Cloud_Mtto_Consulta_Productos.sql",
-		"/C/wamp64/www/curso-mean/client/src/assets/css/styles.css",
+		"/C/wamp64/www/curso-mean/client/src/app/models/user.ts",
+		"/C/wamp64/www/curso-mean/api/controllers/user.js",
 		"/C/wamp64/www/curso-mean/client/src/app/app.component.html",
+		"/C/wamp64/www/curso-mean/client/src/app/services/user.service.ts",
 		"/C/wamp64/www/curso-mean/client/src/app/app.component.ts",
+		"/C/wamp64/www/curso-mean/api/app.js",
+		"/C/wamp64/www/curso-mean/client/src/assets/css/styles.css",
 		"/C/wamp64/www/curso-mean/app.js",
 		"/C/wamp64/www/curso-mean/client/src/app/app.module.ts",
 		"/C/wamp64/www/curso-mean/client/src/app/services/global.ts",
-		"/C/wamp64/www/curso-mean/api/app.js",
-		"/C/wamp64/www/curso-mean/client/src/app/services/user.service.ts",
-		"/C/wamp64/www/curso-mean/api/controllers/user.js",
 		"/C/wamp64/www/curso-mean/api/controllers/artist.js",
 		"/C/version5.00GerA/Version5.00/WinSocCloud/WinSocCloud/mockdata/Strings.json",
 		"/C/wamp64/www/curso-mean/api/node_modules/bson/browser_build/bson.js",
@@ -291,7 +264,6 @@
 		"/C/wamp64/www/curso-angular-cli/src/app/app.component.ts",
 		"/C/wamp64/www/curso-angular-cli/src/app/app.component.html",
 		"/C/wamp64/www/curso-mean/client/src/app/models/album.ts",
-		"/C/wamp64/www/curso-mean/client/src/app/models/user.ts",
 		"/C/wamp64/www/curso-mean/client/src/index.html",
 		"/C/wamp64/www/curso-mean/client/src/app/models/artist.ts",
 		"/C/wamp64/www/curso-mean/middlewares/authenticated.js",
@@ -399,9 +371,7 @@
 		"/C/laragon/www/blog/config/mail.php",
 		"/C/laragon/www/blog/app/Providers/EventServiceProvider.php",
 		"/C/laragon/www/blog/app/Http/Controllers/UsersController.php",
-		"/C/laragon/www/blog/app/Http/Kernel.php",
-		"/C/laragon/www/blog/app/Http/Middleware/CheckRoles.php",
-		"/C/laragon/www/blog/app/Role.php"
+		"/C/laragon/www/blog/app/Http/Kernel.php"
 	],
 	"find":
 	{
@@ -421,6 +391,27 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"CLOUD_LEE_CPROD_PRODUCTO",
+			"almacen",
+			"almacen+",
+			"piso",
+			"ubicacion_principal",
+			"ubicacion",
+			"CLOUD_LEE_CPROD_PRODUCTO",
+			"descr_depto",
+			"Cloud_lee_producto",
+			"Regresa un reg. especifico",
+			"'\n",
+			"Cloud_lee_producto",
+			"lee_producto",
+			"EXEC",
+			"exec",
+			"001",
+			"CRPROD_PARAM",
+			"imp_compra_zona_libre",
+			"\\",
+			"\\\\\\\":\\\\\\\"\\\\\\\"}\\\":\\\"\\\"}}",
+			"\\",
 			"CRTDIA_400",
 			"fecha_hoy",
 			"SP_MOD_ENTRADAS_SALIDAS_400",
@@ -497,6 +488,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"Songs",
 			"song",
 			"Song",
@@ -514,128 +506,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/src/app/app.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/src/app/app.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 804,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/src/app/services/user.service.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 683,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								323,
-								329
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/src/app/services/global.ts",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 75,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								75,
-								75
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1071,7 +943,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 259.0,
 	"status_bar_visible": true,
 	"template_settings":

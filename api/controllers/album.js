@@ -2,7 +2,7 @@
 var path = require('path');
 var fs = require('fs');
 var mongoosePaginate = require('mongoose-pagination');
- var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var Artist = require('../models/artist');
 var User = require('../models/user');
 var Album = require('../models/album');

@@ -48,18 +48,30 @@
 
 	<div class="col-md-6">
 	    <div class="card card-container ">
-	        <form action="" method="POST" role="form">
+	        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister" action="" method="POST" role="form">
 	        	<legend>Registrate</legend>
 	        
 	        	<div class="form-group">
 	        		<label for="">Nombre</label>
-	        		<input id="idName" type="text" class="form-control"  placeholder="Nombre">
+	        		<input id="idName" #name="ngModel" name="name" [(ngModel)]="user_register.name"  type="text" class="form-control"  placeholder="Nombre">
+	        		 <span *ngIf="!name.valid && name.touched">
+	                	El nombre es obligatorio
+	                </span>
+
 	        		<label for="">Apellidos</label>
-	        		<input id="idSurname" type="text" class="form-control"  placeholder="Apellido">
+	        		<input id="idSurname" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname"  type="text" class="form-control"  placeholder="Apellido">
+	        		 <span *ngIf="!surname.valid && surname.touched">
+	                	Los apellidos son obligatorio
+	                </span>
+
 	        		<label for="">Email</label>
-	        		<input id="idEmail" type="text" class="form-control"  placeholder="Email">
+	        		<input id="idEmail" #email="ngModel" name="email" [(ngModel)]="user_register.email" type="text" class="form-control"  placeholder="Email">
+	        		<span *ngIf="!email.valid && email.touched">
+	                	El email es obligatorio
+	                </span>
+
 	        		<label for="">Contraseña</label>
-	        		<input  id="idPassword"  type="text" class="form-control"  placeholder="Contraseña">
+	        		<input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" id="idPassword" class="form-control" placeholder="Contraseña" required>
 	        	</div>
 	        
 	        	<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>
@@ -69,4 +81,7 @@
 	</div>
 
 </div>
+
+
+
 
