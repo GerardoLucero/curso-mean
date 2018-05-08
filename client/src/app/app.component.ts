@@ -87,8 +87,30 @@ export class AppComponent  implements OnInit{
     this.identity = null;
     this.token = null;
   }
+  public alertRegister; 
 
   public onSubmitRegister(){
     console.log(this.user_register);
+
+    this._userService.register(this.user_register).subscribe(
+      response =>{
+        let user = response.user;
+        this.user_register = user;
+
+        if(!user._id){
+          this.alertRegister = 'Error al registrarse';
+        }else{
+
+        }
+      },error =>{
+        var errorMessage = <any>error;
+        if(errorMessage != null){
+          console.log(error);
+          var body = JSON.parse(error._body);
+          this.errorMessage = body.message;
+                 }
+      }
+    );
+
   }
 }
