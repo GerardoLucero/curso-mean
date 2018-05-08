@@ -48,7 +48,7 @@
 
 	<div class="col-md-6">
 	    <div class="card card-container ">
-	        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister" action="" method="POST" role="form">
+	        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" action="" method="POST" role="form">
 	        	<legend>Registrate</legend>
 	        
 	        	<div class="form-group">
@@ -62,7 +62,7 @@
 	        		<input id="idSurname" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname"  type="text" class="form-control"  placeholder="Apellido">
 	        		 <span *ngIf="!surname.valid && surname.touched">
 	                	Los apellidos son obligatorio
-	                </span>
+	                 </span>
 
 	        		<label for="">Email</label>
 	        		<input id="idEmail" #email="ngModel" name="email" [(ngModel)]="user_register.email" type="text" class="form-control"  placeholder="Email">
@@ -71,7 +71,7 @@
 	                </span>
 
 	        		<label for="">Contraseña</label>
-	        		<input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" id="idPassword" class="form-control" placeholder="Contraseña" required>
+	        		<input name="password" #password="ngModel" [(ngModel)]="user_register.password" type="password" id="idPassword" class="form-control" placeholder="Contraseña" required>
 	        	</div>
 	        
 	        	<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>

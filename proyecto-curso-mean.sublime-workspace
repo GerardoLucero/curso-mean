@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"_userService\tproperty"
+			],
+			[
 				"ge",
 				"gethash\tparameter"
 			],
@@ -66,10 +70,6 @@
 			[
 				"ima",
 				"imageFile"
-			],
-			[
-				"user",
-				"userUpdated"
 			],
 			[
 				"fil",
@@ -183,6 +183,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/src/app/app.component.ts",
+			"settings":
+			{
+				"buffer_size": 2613,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/src/app/app.component.html",
+			"settings":
+			{
+				"buffer_size": 3364,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Public Function checaTiempoAireAutorizado()\n'Manejador de errores\nOn Error GoTo MyError\n\nDim clsTransTar As clsMantTransTar\nDim clsFuncMisc As clsMantNotas\nDim intSegEsperar As Integer\nDim intTipoResp As Integer\nDim strResp As String\nDim strQuery As String\nDim strNoAutoriza As String\nDim strMensaje As String\n\n    m_strCodigo = vbNullString\n    m_strAutorizacion = vbNullString\n    strNoAutoriza = vbNullString\n    checaTiempoAireAutorizado = False\n    Set clsFuncMisc = New clsMantNotas\n    \n    intSegEsperar = 30\n    strQuery = \"select * from crtarctr_400 where no_protocolo = 77\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        intSegEsperar = adorsRegTar!tiempo_de_espera\n    End If\n    \n    strQuery = \"SELECT top 1 * FROM CRTRATAR_430 WHERE no_nota = '\" _\n        & m_strNota & \"' and trama_tipo_de_servicio = 77 and tipo_transaccion = 0 order by  ident desc\" 'and codigo_de_respuesta = 'N4'\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        'Revisamos, SOLO los N4, timeout en POS\n        If Trim$(adorsRegTar!codigo_de_respuesta) = \"N4\" Then\n            'Instancia al prosa Syncrono ...\n            Set m_clsProsaSynTar = New clsProsaSync\n        \n            '////////////////////////////////////////////////\n            m_strMensajeTrama = GeneraMensajeProsa(\"\", Trim$(adorsRegTar!no_autorizacion))\n            intTipoResp = m_clsProsaSynTar.MCAutomatic(m_strParam196DirServidor, m_strParam136DirPuerto, intSegEsperar, m_strMensajeTrama, strResp)\n            '////////////////////////////////////////////////\n            \n            Call MDIfrmMain.DespliegaStatus(mtzDictionary.Translate(\"MSG_FAVOR_ESPERAR_MOMENTO\"))\n            'Procesa la respuesta de WinVisaNet\n            \n            m_strCodigo = Mid$(strResp, 1, 2)\n            m_strAutorizacion = Mid$(strResp, 3, 6)\n            If intTipoResp <> 0 Then\n                'No tuvimos respuesta del banco\n                strMensaje = \"La nota es recarga de T. Aire, sin conexion a winvisa, no se permite devolución.\"\n                Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                checaTiempoAireAutorizado = False\n                Select Case intTipoResp\n                    Case 1\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 1 Error Conexion \" & Trim$(m_strNota), Time)\n                    Case 2\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 2 Error Enviar \" & Trim$(m_strNota), Time)\n                    Case 3\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 3 Error Recibir \" & Trim$(m_strNota), Time)\n                End Select\n            Else\n                If m_strCodigo = \"XX\" And Mid(m_strAutorizacion, 1, 2) = \"01\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< ERROR NO EXISTE CONEXION WINVISATIENDA....\"))\n                ElseIf m_strCodigo = \"EF\" And Mid(m_strAutorizacion, 1, 2) = \"02\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< NO EXISTE COMUNICACION WINVISA....\"))\n                ElseIf m_strCodigo = \"LC\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< SUCURSAL SIN LICENCIA....\"))\n                ElseIf m_strCodigo = \"AA\" Then\n                    checaTiempoAireAutorizado = False\n                    strNoAutoriza = Trim$(Mid$(strResp, 35, 20))\n                    strMensaje = \"La recarga de T. Aire si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n                    Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                ElseIf ((m_strCodigo = \"M0\") Or (m_strCodigo = \"M7\")) Then\n                    checaTiempoAireAutorizado = True\n                    strNoAutoriza = Trim$(Mid$(strResp, 1, 45))\n                    Call GrabaBitacoraLog(\"T-AIRE Autorizado para devolverse. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                Else\n                    checaTiempoAireAutorizado = False\n                    'La operación fue rechazada por el banco\n                    Call MC_Mensaje(mtzDictionary.Translate(\"La nota es recarga de Tiempo Aire, Sin comunicación con TA. Blueweb, no se permite devolución.\"))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta No Aut. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                End If\n            End If\n        Else\n            checaTiempoAireAutorizado = False\n            If Trim$(adorsRegTar!codigo_de_respuesta) = \"AA\" Then\n                strNoAutoriza = Trim$(adorsRegTar!folio_proveedor_servicios)\n                strMensaje = \"La nota es recarga de T. Aire, si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n            Else\n                strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga no es N4\"\n            End If\n            Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n            Call GrabaBitacoraLog(\"T-AIRE No es codigo N4 : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n        End If   'N4\n    Else\n        checaTiempoAireAutorizado = False\n        strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga de T. Aire\"\n        Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n        Call GrabaBitacoraLog(\"T-AIRE, No se pudo leer CRTRATAR_430 \", Time)\n    End If  'Leer CRTRATAR_430\n    \n    'destruir\n    Set m_clsProsaSynTar = Nothing\n    Set clsFuncMisc = Nothing\n\nExit Function\nMyError:\n    Err.Raise Err.Number, \"checaTiempoAireAutorizado\" & vbCrLf & Err.Source, Err.Description\nEnd Function\n",
+			"settings":
+			{
+				"buffer_size": 5962,
+				"line_ending": "Windows",
+				"name": "Public Function checaTiempoAireAutorizado()"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -238,12 +265,11 @@
 		"/C/wamp64/www/curso-mean/api",
 		"/C/wamp64/www/curso-mean/client",
 		"/C/wamp64/www/curso-mean/client/src",
-		"/C/wamp64/www/curso-mean/client/src/app",
-		"/C/wamp64/www/curso-mean/client/src/app/models",
-		"/C/wamp64/www/curso-mean/client/src/app/services"
+		"/C/wamp64/www/curso-mean/client/src/app"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/curso-mean/api/controllers/album.js",
 		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Stored Procedures/Consulta de productos/CLOUD_LEE_CPROD_PRODUCTO.sql",
 		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Stored Procedures/Consulta de productos/CLOUD_LEE_PRODUCTO.sql",
 		"/C/version5.00GerA/Version5.00/WinSocCloud/WinSocCloudDatos/Procedimientos/SP_Cloud_Mtto_Consulta_Productos.sql",
@@ -370,8 +396,7 @@
 		"/C/laragon/www/blog/resources/views/emails/contact.blade.php",
 		"/C/laragon/www/blog/config/mail.php",
 		"/C/laragon/www/blog/app/Providers/EventServiceProvider.php",
-		"/C/laragon/www/blog/app/Http/Controllers/UsersController.php",
-		"/C/laragon/www/blog/app/Http/Kernel.php"
+		"/C/laragon/www/blog/app/Http/Controllers/UsersController.php"
 	],
 	"find":
 	{
@@ -506,8 +531,106 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/src/app/app.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2551,
+								2567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3171,
+								3171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1249,
+								1249
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Public Function checaTiempoAireAutorizado()",
+							"default_dir": "C:\\wamp64\\www\\curso-mean\\client\\src\\app",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -943,7 +1066,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 259.0,
 	"status_bar_visible": true,
 	"template_settings":
