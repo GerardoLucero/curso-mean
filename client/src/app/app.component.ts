@@ -13,6 +13,8 @@ export class AppComponent  implements OnInit{
   public identity;
   public token; 
   public errorMessage;
+  public alertRegister; 
+
 
   constructor(private _userService: UserService){
   	this.user = new User("","","","","","ROLE_USER","");
@@ -53,8 +55,7 @@ export class AppComponent  implements OnInit{
                     alert("El token no se ha generado correctamente");
                   }else{
                      localStorage.setItem('token', token);
-                     console.log(token);
-                     console.log(identity);
+                     this.user = new User("","","","","","ROLE_USER","");
                   }
                 },
                 error =>{
@@ -87,7 +88,6 @@ export class AppComponent  implements OnInit{
     this.identity = null;
     this.token = null;
   }
-  public alertRegister; 
 
   public onSubmitRegister(){
     console.log(this.user_register);
@@ -100,15 +100,16 @@ export class AppComponent  implements OnInit{
         if(!user._id){
           this.alertRegister = 'Error al registrarse';
         }else{
-
+          this.alertRegister = 'El usuario se registró correctamente, identificate con '+ this.user_register.email;
+          this.user_register = new User("","","","","","ROLE_USER","");
         }
       },error =>{
         var errorMessage = <any>error;
         if(errorMessage != null){
           console.log(error);
           var body = JSON.parse(error._body);
-          this.errorMessage = body.message;
-                 }
+          this.alertRegister = body.message;
+          }
       }
     );
 

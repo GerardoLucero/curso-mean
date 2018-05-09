@@ -18,7 +18,7 @@ function saveUser(req, res){
 	var params = req.body;
 	user.name = params.name;
 	user.surname = params.surname;
-	user.email = params.email;
+	user.email = params.email.toLowerCase();
 	user.role = 'ROLE_ADMIN';
 	user.image = 'null';
 	if(params.password){
@@ -61,6 +61,7 @@ function loginUser(req, res){
 					res.status(500).send({menssage: 'Error en la petición'});
 				}else{
 					if(!user){
+
 						res.status(404).send({message: 'El usuario no existe'})
 					}
 					else{
