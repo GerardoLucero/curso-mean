@@ -1,7 +1,7 @@
 
 <div *ngIf="identity" class="title navigation col-lg-1">
   <h1 class="text-center">
-    {{title}}
+    {{ title }}
   </h1>  
   <span> 
   	{{ identity.name}} {{ identity.surname}}
@@ -10,10 +10,10 @@
   <span class="btn btn-warning" (click)="logout()" >
   		Cerrar sesíon
   </span>
-  <user-edit></user-edit>
+   <user-edit></user-edit>
 </div>
 <div class="clearfix">
-	  	
+	 
 </div>
 <div class="col-md-12" *ngIf="!identity">
 	<div class="col-md-6">
