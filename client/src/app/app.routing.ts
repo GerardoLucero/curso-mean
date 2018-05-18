@@ -4,7 +4,7 @@ import {Routes, RouterModule} from '@amgular/router';
 //import user
 import { UserEditComponent } from './components/user-edit.component';
 
-const appRouters: Routes = [
+const appRoutes: Routes = [
 {path: '', component: UserEditComponent },
 {path: 'mis-datos', component: UserEditComponent }, 
 {path: '**', component: UserEditComponent }];
