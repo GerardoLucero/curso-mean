@@ -44,7 +44,7 @@ export class UserService{
 		let headers = new Headers({'Content-Type': 'application/json; charset=UTF-8', 
 									'Authorization': this.getToken()
 								});
-		return this._http.post(this.url+'update-user/'+user_to_update._id, params, {headers: headers})	
+		return this._http.put(this.url+'update-user/'+user_to_update._id, params, {headers: headers})	
 					.map(res => res.json());
 	}
 
