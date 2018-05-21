@@ -1,4 +1,34 @@
+<hr>
 <div class="col-lg-6" *ngIf="identity">	
 	<h2>{{  titulo }}</h2>
 	<!--Formulario-->
+	    <form #userUpdateForm="ngForm" (ngSubmit)="onSubmit()" action="" method="POST" role="form">
+	        <div *ngIf="alertUpdate" >
+					<div class="alert alert-info">
+					   {{alertUpdate}}
+					</div>
+				</div>
+	        	<div class="form-group">
+	        		<label for="">Nombre</label>
+	        		<input id="idName" #name="ngModel" name="name" [(ngModel)]="user.name"  type="text" class="form-control"  placeholder="Nombre">
+	        		 <span *ngIf="!name.valid && name.touched">
+	                	El nombre es obligatorio
+	                </span>
+
+	        		<label for="">Apellidos</label>
+	        		<input id="idSurname" #surname="ngModel" name="surname" [(ngModel)]="user.surname"  type="text" class="form-control"  placeholder="Apellido">
+	        		 <span *ngIf="!surname.valid && surname.touched">
+	                	Los apellidos son obligatorio
+	                 </span>
+
+	        		<label for="">Email</label>
+	        		<input id="idEmail" #email="ngModel" name="email" [(ngModel)]="user.email" type="text" class="form-control"  placeholder="Email">
+	        		<span *ngIf="!email.valid && email.touched">
+	                	El email es obligatorio
+	                </span>
+
+	        	</div>
+	        
+	        	<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Actualizar mis datos</button>
+	     </form>
 </div>
