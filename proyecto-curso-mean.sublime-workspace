@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"us",
+				"_userService\tproperty"
+			],
+			[
 				"Rou",
 				"RouterModule\talias"
 			],
@@ -30,10 +34,6 @@
 			[
 				"user",
 				"UserService\talias"
-			],
-			[
-				"us",
-				"user_register\tproperty"
 			],
 			[
 				"USER",
@@ -207,7 +207,7 @@
 			"file": "client/src/app/app.module.ts",
 			"settings":
 			{
-				"buffer_size": 627,
+				"buffer_size": 626,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -225,7 +225,7 @@
 			"file": "client/src/app/services/user.service.ts",
 			"settings":
 			{
-				"buffer_size": 1913,
+				"buffer_size": 1912,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -234,8 +234,61 @@
 			"file": "client/src/app/components/user-edit.component.ts",
 			"settings":
 			{
-				"buffer_size": 645,
+				"buffer_size": 864,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n        If checaDevolTicket(m_strNota) = False Then\n            m_blnDevolTiquet = False\n\n            If m_blnEntrenamiento Then\n                MensajeO = \"Nota de devolución, consumos internos o entrenamiento, no se devuelven.\"\n                Accion = 0\n            End If\n\n            If m_blnDiasDevolExpirados Then\n                MensajeO = \"El tiempo válido para realizar la devolución ha expirado.\"\n                Accion = 0\n            End If\n\n            'mensaje de que no se encontro la nota...\n            MensajeO = \"No existe Nota de Venta.\"\n\n            'checar el parametro miscelaneo\n            If m_blnParamMisc61 Then\n                Accion = 0\n            End If\n\n            dictionary.Clear()\n            dictionary.Add(\"Mensaje\", MensajeO)\n            dictionary.Add(\"Accion\", Accion)\n            mensajejson = json.GetJSon(dictionary, \"mensaje\")\n            Return mensajejson\n\n            'Send Message and action\n        End If\n\n        'Checa si es una venta de tipo aire, si es asi verifica si la autorizo o no\n        If m_intTipoVenta = 11 Then\n            If checaTiempoAireAutorizado() = False Then\n\n                Accion = 0\n                dictionary.Clear()\n                dictionary.Add(\"Mensaje\", MensajeO)\n                dictionary.Add(\"Accion\", Accion)\n                mensajejson = json.GetJSon(dictionary, \"mensaje\")\n                Return mensajejson\n            End If\n        End Ifb",
+			"settings":
+			{
+				"buffer_size": 1435,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Gerardo/Desktop/Winsoc Cloud/Codigo nuevo dlls failed.vbs",
+			"settings":
+			{
+				"buffer_size": 51585,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n\nDim RTtarjeta_credito As String\t \nDim RTno_nota As String\t\nDim RThora_venta As String\t\nDim RTno_cajero As String\t\nDim RTexpiracRTion As String\nDim RTtipo_transaccion As Integer\nDim RTcancelacion_transaccion As Integer\nDim RTnombre_tarjeta As String\nDim RTcaptura_manual As Integer\nDim RTaut_automatica As Integer|\nDim RTcantidad As Decimal\nDim RTsaldo As Decimal\nDim RTboletin_utilizado As String\nDim RTfecha_2000 As String\nDim RThora As String\nDim RTcaja_que_RTrecibio As Integer\nDim RTno_autorizacion As String\nDim RTno_lote As String\nDim RTfecha_deposito_2000 As String\nDim RTdescuento_especial As Integer\nDim RTpagare_cancelado As Integer\nDim tecla_pago As Integer\nDim RTno_banco As Integer\nDim RTtrack_1 As String\nDim RTtrack_2 As String\nDim RTsequencia As String\nDim RTident As String\n",
+			"settings":
+			{
+				"buffer_size": 793,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\nDim clsTransTar As clsMantTransTar\nDim clsFuncMisc As clsMantNotas\nDim intSegEsperar As Integer\nDim intTipoResp As Integer\nDim strResp As String\nDim strQuery As String\nDim strNoAutoriza As String\nDim strMensaje As String\n\n    m_strCodigo = vbNullString\n    m_strAutorizacion = vbNullString\n    strNoAutoriza = vbNullString\n    checaTiempoAireAutorizado = False\n    Set clsFuncMisc = New clsMantNotas\n    \n    intSegEsperar = 30\n    strQuery = \"select * from crtarctr_400 where no_protocolo = 77\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        intSegEsperar = adorsRegTar!tiempo_de_espera\n    End If\n    \n    strQuery = \"SELECT top 1 * FROM CRTRATAR_430 WHERE no_nota = '\" _\n        & m_strNota & \"' and trama_tipo_de_servicio = 77 and tipo_transaccion = 0 order by  ident desc\" 'and codigo_de_respuesta = 'N4'\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        'Revisamos, SOLO los N4, timeout en POS\n        If Trim$(adorsRegTar!codigo_de_respuesta) = \"N4\" Then\n            'Instancia al prosa Syncrono ...\n            Set m_clsProsaSynTar = New clsProsaSync\n        \n            '////////////////////////////////////////////////\n            m_strMensajeTrama = GeneraMensajeProsa(\"\", Trim$(adorsRegTar!no_autorizacion))\n            intTipoResp = m_clsProsaSynTar.MCAutomatic(m_strParam196DirServidor, m_strParam136DirPuerto, intSegEsperar, m_strMensajeTrama, strResp)\n            '////////////////////////////////////////////////\n            \n            Call MDIfrmMain.DespliegaStatus(mtzDictionary.Translate(\"MSG_FAVOR_ESPERAR_MOMENTO\"))\n            'Procesa la respuesta de WinVisaNet\n            \n            m_strCodigo = Mid$(strResp, 1, 2)\n            m_strAutorizacion = Mid$(strResp, 3, 6)\n            If intTipoResp <> 0 Then\n                'No tuvimos respuesta del banco\n                strMensaje = \"La nota es recarga de T. Aire, sin conexion a winvisa, no se permite devolución.\"\n                Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                checaTiempoAireAutorizado = False\n                Select Case intTipoResp\n                    Case 1\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 1 Error Conexion \" & Trim$(m_strNota), Time)\n                    Case 2\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 2 Error Enviar \" & Trim$(m_strNota), Time)\n                    Case 3\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 3 Error Recibir \" & Trim$(m_strNota), Time)\n                End Select\n            Else\n                If m_strCodigo = \"XX\" And Mid(m_strAutorizacion, 1, 2) = \"01\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< ERROR NO EXISTE CONEXION WINVISATIENDA....\"))\n                ElseIf m_strCodigo = \"EF\" And Mid(m_strAutorizacion, 1, 2) = \"02\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< NO EXISTE COMUNICACION WINVISA....\"))\n                ElseIf m_strCodigo = \"LC\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< SUCURSAL SIN LICENCIA....\"))\n                ElseIf m_strCodigo = \"AA\" Then\n                    checaTiempoAireAutorizado = False\n                    strNoAutoriza = Trim$(Mid$(strResp, 35, 20))\n                    strMensaje = \"La recarga de T. Aire si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n                    Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                ElseIf ((m_strCodigo = \"M0\") Or (m_strCodigo = \"M7\")) Then\n                    checaTiempoAireAutorizado = True\n                    strNoAutoriza = Trim$(Mid$(strResp, 1, 45))\n                    Call GrabaBitacoraLog(\"T-AIRE Autorizado para devolverse. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                Else\n                    checaTiempoAireAutorizado = False\n                    'La operación fue rechazada por el banco\n                    Call MC_Mensaje(mtzDictionary.Translate(\"La nota es recarga de Tiempo Aire, Sin comunicación con TA. Blueweb, no se permite devolución.\"))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta No Aut. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                End If\n            End If\n        Else\n            checaTiempoAireAutorizado = False\n            If Trim$(adorsRegTar!codigo_de_respuesta) = \"AA\" Then\n                strNoAutoriza = Trim$(adorsRegTar!folio_proveedor_servicios)\n                strMensaje = \"La nota es recarga de T. Aire, si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n            Else\n                strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga no es N4\"\n            End If\n            Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n            Call GrabaBitacoraLog(\"T-AIRE No es codigo N4 : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n        End If   'N4\n    Else\n        checaTiempoAireAutorizado = False\n        strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga de T. Aire\"\n        Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n        Call GrabaBitacoraLog(\"T-AIRE, No se pudo leer CRTRATAR_430 \", Time)\n    End If  'Leer CRTRATAR_430\n    \n    'destruir\n    Set m_clsProsaSynTar = Nothing\n    Set clsFuncMisc = Nothing",
+			"settings":
+			{
+				"buffer_size": 5743,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/controllers/user.js",
+			"settings":
+			{
+				"buffer_size": 4044,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "'use strinct'\n\nvar jwt = require('jwt-simple');\nvar moment = require('moment');\nvar secret = 'Clave_secreta';\nconst dd = require('dump-die')\n\nexports.ensureAuth = function(req, res, next){\n\tif(!req.headers.authorization) {\n\t\treturn res.status(403).send({message: 'La peticion no tiene permisos'});\n\t}\n\telse{\n\t\tvar token = req.headers.authorization.replace(/['\"]+/g, '');\n\t\ttry{\n\t\t\tvar payload = jwt.decode(token, secret);\n\t\t\tif(payload.exp <= moment().unix() ){\n\t\t\t\treturn res.status(401).send({message: 'El token ha expirado'})\n\t\t\t}\n\t\t}catch(ex){\n\t\t\t//console.log(ex);\n\t\t\treturn res.status(403).send({message: 'El token no es valido'})\n\t\t}\n\t\treq.user = payload;\n\t\tnext();\n\t}\n};",
+			"file": "api/middlewares/authenticated.js",
+			"file_size": 704,
+			"file_write_time": 131714170901243080,
+			"settings":
+			{
+				"buffer_size": 678,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,7 +296,7 @@
 			"file": "client/src/app/views/user-edit.html",
 			"settings":
 			{
-				"buffer_size": 90,
+				"buffer_size": 1440,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -252,7 +305,7 @@
 			"file": "client/src/app/app.component.html",
 			"settings":
 			{
-				"buffer_size": 4083,
+				"buffer_size": 4111,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -317,6 +370,7 @@
 	},
 	"expanded_folders":
 	[
+		"/C/wamp64/www/curso-mean",
 		"/C/wamp64/www/curso-mean/client",
 		"/C/wamp64/www/curso-mean/client/src",
 		"/C/wamp64/www/curso-mean/client/src/app",
@@ -590,7 +644,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -599,15 +653,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 627,
+						"buffer_size": 626,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								479,
+								479
 							]
 						],
 						"settings":
@@ -627,7 +681,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -643,8 +697,8 @@
 						"selection":
 						[
 							[
-								633,
-								633
+								824,
+								842
 							]
 						],
 						"settings":
@@ -661,10 +715,10 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 210.0,
+						"translation.y": 978.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -673,15 +727,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1913,
+						"buffer_size": 1912,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1546,
-								1546
+								598,
+								598
 							]
 						],
 						"settings":
@@ -697,10 +751,10 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -709,15 +763,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 645,
+						"buffer_size": 864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								864,
+								864
 							]
 						],
 						"settings":
@@ -727,33 +781,35 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 76.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "client/src/app/views/user-edit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 90,
+						"buffer_size": 1435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								320,
+								320
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"auto_name": "",
+							"default_dir": "C:\\wamp64\\www\\curso-mean\\client\\src\\app\\components",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -764,19 +820,193 @@
 				},
 				{
 					"buffer": 5,
-					"file": "client/src/app/app.component.html",
+					"file": "/C/Users/Gerardo/Desktop/Winsoc Cloud/Codigo nuevo dlls failed.vbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4083,
+						"buffer_size": 51585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								737,
-								737
+								975,
+								975
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VBScript/VBScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 343.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								464,
+								464
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\Users\\Gerardo\\Desktop\\Winsoc Cloud",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								656,
+								656
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"default_dir": "C:\\wamp64\\www\\curso-mean",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "api/controllers/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2336,
+								2336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1248.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "api/middlewares/authenticated.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/src/app/views/user-edit.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1295,
+								1295
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 208.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "client/src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2342,
+								4090
 							]
 						],
 						"settings":
@@ -785,14 +1015,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 144.0,
+						"translation.y": 1197.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 12,
 					"file": "client/src/app/app.routing.ts",
 					"semi_transient": false,
 					"settings":
@@ -804,8 +1034,8 @@
 						"selection":
 						[
 							[
-								484,
-								484
+								190,
+								190
 							]
 						],
 						"settings":
@@ -818,7 +1048,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]

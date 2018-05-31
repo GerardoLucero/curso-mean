@@ -97,25 +97,28 @@ function updateUser(req, res){
 	var userId = req.params.id;
 	var update = req.body;
 
-	if(UserId != req.user.sub){
-		res.status(404).send({message: 'No tienes permiso para actualizara'});
+	if(userId != req.user.sub){
+		res.status(404).send({message: 'No tienes permiso para actualizar'});
 	}
-
 
 	User.findByIdAndUpdate(userId, update, (err, userUpdated) => {
 		if(err){
 			res.status(404).send({message: 'Error al actualizar el usuario'});
+			console.log("Error 1")
 		}
 		else{
 			if(!userUpdated){
 				res.status(404).send({message: 'Error al actualizar el usuario'});
+				console.log("Error 2")
 			}
 			else{
 				res.status(200).send({user: userUpdated});
-			}
-		}
+				console.log("Success")
+				}
 
-	});
+			}
+
+		});	
 }
 
 function uploadImage(req, res){

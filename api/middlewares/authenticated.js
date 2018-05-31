@@ -3,11 +3,11 @@
 var jwt = require('jwt-simple');
 var moment = require('moment');
 var secret = 'Clave_secreta';
-const dd = require('dump-die')
+const dd = require('dump-die');
 
 exports.ensureAuth = function(req, res, next){
 	if(!req.headers.authorization) {
-		return  res.status(403).send({message: 'La peticion no tiene permisos'});
+		return res.status(403).send({message: 'La peticion no tiene permisos'});
 	}
 	else{
 		var token = req.headers.authorization.replace(/['"]+/g, '');

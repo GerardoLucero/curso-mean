@@ -40,7 +40,6 @@ export class UserService{
 
 	updateUser(user_to_update){
 		let params = JSON.stringify(user_to_update);
-		console.log(user_to_update);
 		let headers = new Headers({'Content-Type': 'application/json; charset=UTF-8', 
 									'Authorization': this.getToken()
 								});

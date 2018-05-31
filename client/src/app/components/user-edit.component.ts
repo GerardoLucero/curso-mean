@@ -14,7 +14,7 @@ export class UserEditComponent  implements OnInit{
 	public user:User;
 	public identity;
 	public token;
-
+	public alertUpdate; 
 	constructor(private _userService:UserService){
 		this.titulo = 'Actualizar mis datos';
 		this.user = new User("","","","","","ROLE_USER","");
@@ -31,7 +31,18 @@ export class UserEditComponent  implements OnInit{
 		console.log(this.user);
 		this._userService.updateUser(this.user).subscribe( 
 			response => {
-			}
+				console.log(this.user);
+				this.alertUpdate = 'Se actualizo correctamente'
+				this.identity = this._userService.getIdentity();
+				this.user = this.identity;
+			},error =>{
+	        var errorMessage = <any>error;
+	        if(errorMessage != null){
+	          console.log(error);
+	          var body = JSON.parse(error._body);
+	          this.alertUpdate  = body.message;
+	          }
+      }
 		);
 	}
 
