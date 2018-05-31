@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from  './app.routing';
 import { AppComponent } from './app.component';
 import { UserEditComponent } from './components/user-edit.component';
-
+1
 @NgModule({
   declarations: [
     AppComponent,

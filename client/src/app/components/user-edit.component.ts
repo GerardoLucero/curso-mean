@@ -32,9 +32,16 @@ export class UserEditComponent  implements OnInit{
 		this._userService.updateUser(this.user).subscribe( 
 			response => {
 				console.log(this.user);
-				this.alertUpdate = 'Se actualizo correctamente'
-				this.identity = this._userService.getIdentity();
-				this.user = this.identity;
+				
+				if(!response.user)
+					this.alertUpdate  = 'El usuario no se ha actualizado';
+				else{
+					//this.user = response.user;
+					localStorage.setItem('identity', JSON.stringify(this.user));
+					document.getElementById("identity_name").innerHTML = this.user.name;
+					this.alertUpdate  = 'El usuario se ha actualizado correctamente';
+
+				}
 			},error =>{
 	        var errorMessage = <any>error;
 	        if(errorMessage != null){
