@@ -27,6 +27,15 @@
 	                	El email es obligatorio
 	                </span>
 
+	                <div class="image_for_edit" *ngIf="user.image != 'null'">
+	                	<img src=""/>
+	                </div>
+
+	                <p>
+	                	<label>Sube tu foto</label>
+	                	<input type="file" placeholder="Subir imagen..." name="">
+	                </p>
+
 	        	</div>
 	        
 	        	<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Actualizar mis datos</button>
