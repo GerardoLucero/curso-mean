@@ -49,8 +49,9 @@ export class UserEditComponent  implements OnInit{
 	          var body = JSON.parse(error._body);
 	          this.alertUpdate  = body.message;
 	          }
-      }
+      		}
 		);
 	}
+
 
 }

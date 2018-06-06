@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"innerHTML\tproperty"
+			],
+			[
+				"get",
+				"getElementById\tmethod"
+			],
+			[
+				"ide",
+				"identity"
+			],
+			[
+				"loc",
+				"localStorage\tvar"
+			],
+			[
+				"PARA",
+				"params"
+			],
+			[
 				"us",
 				"_userService\tproperty"
 			],
@@ -207,9 +227,42 @@
 			"file": "client/src/app/app.module.ts",
 			"settings":
 			{
-				"buffer_size": 626,
+				"buffer_size": 627,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/src/app/components/user-edit.component.ts",
+			"settings":
+			{
+				"buffer_size": 1495,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Private Dim no_nota As \nPrivate Dim hora_venta As \nPrivate Dim hora As \nPrivate Dim fecha_nota As \nPrivate Dim fecha_2000 As \nPrivate Dim no_cajero As \nPrivate Dim no_supervisor As \nPrivate Dim no_seguridad As \nPrivate Dim folio_control As \nPrivate Dim folio_archivo As \nPrivate Dim tienda As \nPrivate Dim caja As \nPrivate Dim no_linea As \nPrivate Dim tipo_de_operacion As \nPrivate Dim tipo_de_funcion As \nPrivate Dim tipo_de_registro As \nPrivate Dim cliente_distinguido As \nPrivate Dim tipo_de_transaccion As \nPrivate Dim tipo_de_venta As \nPrivate Dim tipo_precio_actual As \nPrivate Dim funcion_actual As \nPrivate Dim composicion As \nPrivate Dim linea_invalida As \nPrivate Dim linea_suspendida As \nPrivate Dim linea_consultada As \nPrivate Dim no_veces_impresa As \nPrivate Dim cantidad As \nPrivate Dim cantidad_devuelta As \nPrivate Dim no_producto As \nPrivate Dim no_generico As \nPrivate Dim depto_destino As \nPrivate Dim no_depto As \nPrivate Dim no_familia As b\nPrivate Dim no_especie As \nPrivate Dim no_impuesto As \nPrivate Dim impuesto_especial As \nPrivate Dim descripcion As \nPrivate Dim descripcion_larga As \nPrivate Dim descripcion_deptal As \nPrivate Dim descripcion_oferta As \nPrivate Dim descripcion_oferta_producto As \nPrivate Dim descripcion_oferta_cupon As \nPrivate Dim descripcion_transaccion As \nPrivate Dim precio_costo As \nPrivate Dim precio_unitario As \nPrivate Dim precio_unitario_oferta As \nPrivate Dim precio_unitario_ticket As \nPrivate Dim precio_unitario_calculado As \nPrivate Dim precio_unitario_original As \nPrivate Dim precio_total As \nPrivate Dim precio_total_devuelto As \nPrivate Dim impuesto_venta As \nPrivate Dim impuesto_esp_venta As \nPrivate Dim tg_ventas As \nPrivate Dim tg_impuestos_venta As \nPrivate Dim tg_impuestos_venta_esp As \nPrivate Dim tg_descuentos As \nPrivate Dim tg_impuestos_descuento As \nPrivate Dim tg_impuestos_descuento_esp As \nPrivate Dim porcentaje_descuento As \nPrivate Dim porcentaje_descuento_anterior As \nPrivate Dim monto_descuento As \nPrivate Dim monto_rebaja As \nPrivate Dim monto_descuento_anterior As \nPrivate Dim monto_rebaja_anterior As \nPrivate Dim impacto_oferta As \nPrivate Dim cant_prod_en_oferta As \nPrivate Dim monto_minimo_oferta As \nPrivate Dim tipo_de_oferta As \nPrivate Dim folio_oferta As \nPrivate Dim folio_oferta_cupon As \nPrivate Dim cupon_oferta_generar As \nPrivate Dim productos_x_cupon As \nPrivate Dim cupon_oferta_recibido As \nPrivate Dim veces_cupon_recibido As \nPrivate Dim descuento_especial As \nPrivate Dim descuento_precio As \nPrivate Dim pago_puntos As \nPrivate Dim venta_prod_no_pesado As \nPrivate Dim metro_kilos As \nPrivate Dim producto_digitado As \nPrivate Dim precio_digitado As \nPrivate Dim descuento_tecla As \nPrivate Dim bascula_deshabilitada As \nPrivate Dim atributo_producto_1 As \nPrivate Dim atributo_producto_2 As \nPrivate Dim atributo_producto_3 As \nPrivate Dim producto_marca_propia As \nPrivate Dim producto_cancelable As \nPrivate Dim oferta_temporal As \nPrivate Dim linea_complemento As \nPrivate Dim oferta_equivalente As \nPrivate Dim acepta_descuento_directo As \nPrivate Dim producto_acumula_puntos As \nPrivate Dim producto_devolvible As \nPrivate Dim impresion_garantia As \nPrivate Dim promocion_bancaria As \nPrivate Dim pago_promocion_bancaria As \nPrivate Dim capturar_numero_serie As \nPrivate Dim numero_serie As \nPrivate Dim codigo_familia As \nPrivate Dim codigo_valor As \nPrivate Dim concepto_venta_deptal As \nPrivate Dim puntos_adicionales As \nPrivate Dim promocion_tombola As \nPrivate Dim oferta_cupones_1 As \nPrivate Dim oferta_cupones_2 As \nPrivate Dim oferta_cupones_3 As \nPrivate Dim no_promocion As \nPrivate Dim descripcion_promocion As \nPrivate Dim no_servicio As \nPrivate Dim concepto_1 As \nPrivate Dim concepto_2 As \nPrivate Dim concepto_3 As \nPrivate Dim cantidad_pagada As \nPrivate Dim fecha_servicio_original As \nPrivate Dim no_folio As \nPrivate Dim nombre_cliente As \nPrivate Dim telefono As \nPrivate Dim fecha_apertura_2000 As \nPrivate Dim fecha_abono_2000 As \nPrivate Dim fecha_liquidacion_2000 As \nPrivate Dim fecha_vencimiento_2000 As \nPrivate Dim tipo_abono As \nPrivate Dim monto_original As \nPrivate Dim importe_abono As \nPrivate Dim saldo_actual As \nPrivate Dim importe_x_devolver As \nPrivate Dim importe_devuelto As \nPrivate Dim importe_para_tienda As \nPrivate Dim no_tipo_pago As \nPrivate Dim cantidad_pago_me As \nPrivate Dim cantidad_pago As \nPrivate Dim tipo_de_cambio_pago As \nPrivate Dim no_concepto_pago As \nPrivate Dim concepto_1_pago As \nPrivate Dim concepto_alterno_pago As \nPrivate Dim concepto_2_pago As \nPrivate Dim concepto_3_pago As \nPrivate Dim no_funcion_especial As \nPrivate Dim importe_funcion_especial As \nPrivate Dim sequencia As ",
+			"settings":
+			{
+				"buffer_size": 4677,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "  adorsRegAux.no_nota  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.hora_venta = parametros(\"RegistroCollection\")(0)(\"hora_venta\")\n  adorsRegAux.hora  = parametros(\"RegistroCollection\")(0)(\"hora\")\n  adorsRegAux.fecha_nota = parametros(\"RegistroCollection\")(0)(\"fecha_nota\")\n  adorsRegAux.fecha_2000 = parametros(\"RegistroCollection\")(0)(\"fecha_2000\")\n  adorsRegAux.no_cajero = parametros(\"RegistroCollection\")(0)(\"no_cajero\")\n  adorsRegAux.no_supervisor = parametros(\"RegistroCollection\")(0)(\"no_supervisor\")\n  adorsRegAux.no_seguridad = parametros(\"RegistroCollection\")(0)(\"no_seguridad\")\n  adorsRegAux.folio_control = parametros(\"RegistroCollection\")(0)(\"folio_control\")\n  adorsRegAux.folio_archivo  = parametros(\"RegistroCollection\")(0)(\"folio_archivo\")\n  adorsRegAux.tienda  = parametros(\"RegistroCollection\")(0)(\"tienda\")\n  adorsRegAux.caja  = parametros(\"RegistroCollection\")(0)(\"caja\")\n  adorsRegAux.no_linea  = parametros(\"RegistroCollection\")(0)(\"no_linea\")\n  adorsRegAux.tipo_de_operacion  = parametros(\"RegistroCollection\")(0)(\"tipo_de_operacion\")\n  adorsRegAux.tipo_de_funcion  = parametros(\"RegistroCollection\")(0)(\"tipo_de_funcion\")\n  adorsRegAux.tipo_de_registro  = parametros(\"RegistroCollection\")(0)(\"tipo_de_registro\")\n  adorsRegAux.cliente_distinguido = parametros(\"RegistroCollection\")(0)(\"cliente_distinguido\")\n  adorsRegAux.tipo_de_transaccion  = parametros(\"RegistroCollection\")(0)(\"tipo_de_transaccion\")\n  adorsRegAux.tipo_de_venta  = parametros(\"RegistroCollection\")(0)(\"tipo_de_venta\")\n  adorsRegAux.tipo_precio_actual  = parametros(\"RegistroCollection\")(0)(\"tipo_precio_actual\")\n  adorsRegAux.funcion_actual  = parametros(\"RegistroCollection\")(0)(\"funcion_actual\")\n  adorsRegAux.composicion  = parametros(\"RegistroCollection\")(0)(\"composicion\")\n  adorsRegAux.linea_invalida  = parametros(\"RegistroCollection\")(0)(\"linea_invalida\")\n  adorsRegAux.linea_suspendida  = parametros(\"RegistroCollection\")(0)(\"linea_suspendida\")\n  adorsRegAux.linea_consultada  = parametros(\"RegistroCollection\")(0)(\"linea_consultada\")\n  adorsRegAux.no_veces_impresa  = parametros(\"RegistroCollection\")(0)(\"no_veces_impresa\")\n  adorsRegAux.cantidad  = parametros(\"RegistroCollection\")(0)(\"cantidad\")\n  adorsRegAux.cantidad_devuelta  = parametros(\"RegistroCollection\")(0)(\"cantidad_devuelta\")\n  adorsRegAux.no_producto = parametros(\"RegistroCollection\")(0)(\"no_producto\")\n  adorsRegAux.no_generico = parametros(\"RegistroCollection\")(0)(\"no_generico\")\n  adorsRegAux.depto_destino  = parametros(\"RegistroCollection\")(0)(\"depto_destino\")\n  adorsRegAux.no_depto  = parametros(\"RegistroCollection\")(0)(\"no_depto\")\n  adorsRegAux.no_familia  = parametros(\"RegistroCollection\")(0)(\"no_familia\")\n  adorsRegAux.no_especie  = parametros(\"RegistroCollection\")(0)(\"no_especie\")\n  adorsRegAux.no_impuesto  = parametros(\"RegistroCollection\")(0)(\"no_impuesto\")\n  adorsRegAux.impuesto_especial  = parametros(\"RegistroCollection\")(0)(\"impuesto_especial\")\n  adorsRegAux.descripcion = parametros(\"RegistroCollection\")(0)(\"descripcion\")\n  adorsRegAux.descripcion_larga = parametros(\"RegistroCollection\")(0)(\"descripcion_larga\")\n  adorsRegAux.descripcion_deptal = parametros(\"RegistroCollection\")(0)(\"descripcion_deptal\")\n  adorsRegAux.descripcion_oferta = parametros(\"RegistroCollection\")(0)(\"descripcion_oferta\")\n  adorsRegAux.descripcion_oferta_producto = parametros(\"RegistroCollection\")(0)(\"descripcion_oferta_producto\")\n  adorsRegAux.descripcion_oferta_cupon = parametros(\"RegistroCollection\")(0)(\"descripcion_oferta_cupon\")\n  adorsRegAux.descripcion_transaccion = parametros(\"RegistroCollection\")(0)(\"descripcion_transaccion\")\n  adorsRegAux.precio_costo  = parametros(\"RegistroCollection\")(0)(\"precio_costo\")\n  adorsRegAux.precio_unitario  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.precio_unitario_oferta  = parametros(\"RegistroCollection\")(0)(\"precio_unitario_oferta\")\n  adorsRegAux.precio_unitario_ticket  = parametros(\"RegistroCollection\")(0)(\"precio_unitario_ticket\")\n  adorsRegAux.precio_unitario_calculado  = parametros(\"RegistroCollection\")(0)(\"precio_unitario_calculado\")\n  adorsRegAux.precio_unitario_original  = parametros(\"RegistroCollection\")(0)(\"precio_unitario_original\")\n  adorsRegAux.precio_total  = parametros(\"RegistroCollection\")(0)(\"precio_total\")\n  adorsRegAux.precio_total_devuelto  = parametros(\"RegistroCollection\")(0)(\"precio_total_devuelto\")\n  adorsRegAux.impuesto_venta  = parametros(\"RegistroCollection\")(0)(\"precio_total_devuelto\")\n  adorsRegAux.impuesto_esp_venta  = parametros(\"RegistroCollection\")(0)(\"impuesto_esp_venta\")\n  adorsRegAux.tg_ventas  = parametros(\"RegistroCollection\")(0)(\"tg_ventas\")\n  adorsRegAux.tg_impuestos_venta  = parametros(\"RegistroCollection\")(0)(\"tg_impuestos_venta\")\n  adorsRegAux.tg_impuestos_venta_esp  = parametros(\"RegistroCollection\")(0)(\"tg_impuestos_venta_esp\")\n  adorsRegAux.tg_descuentos  = parametros(\"RegistroCollection\")(0)(\"tg_descuentos\")\n  adorsRegAux.tg_impuestos_descuento  = parametros(\"RegistroCollection\")(0)(\"tg_impuestos_descuento\")\n  adorsRegAux.tg_impuestos_descuento_esp  = parametros(\"RegistroCollection\")(0)(\"tg_impuestos_descuento_esp\")\n  adorsRegAux.porcentaje_descuento  = parametros(\"RegistroCollection\")(0)(\"porcentaje_descuento\")\n  adorsRegAux.porcentaje_descuento_anterior  = parametros(\"RegistroCollection\")(0)(\"porcentaje_descuento_anterior\")\n  adorsRegAux.monto_descuento  = parametros(\"RegistroCollection\")(0)(\"monto_descuento\")\n  adorsRegAux.monto_rebaja  = parametros(\"RegistroCollection\")(0)(\"monto_rebaja\")\n  adorsRegAux.monto_descuento_anterior  = parametros(\"RegistroCollection\")(0)(\"monto_descuento_anterior\")\n  adorsRegAux.monto_rebaja_anterior  = parametros(\"RegistroCollection\")(0)(\"monto_rebaja_anterior\")\n  adorsRegAux.impacto_oferta  = parametros(\"RegistroCollection\")(0)(\"impacto_oferta\")\n  adorsRegAux.cant_prod_en_oferta  = parametros(\"RegistroCollection\")(0)(\"cant_prod_en_oferta\")\n  adorsRegAux.monto_minimo_oferta  = parametros(\"RegistroCollection\")(0)(\"monto_minimo_oferta\")\n  adorsRegAux.tipo_de_oferta  = parametros(\"RegistroCollection\")(0)(\"tipo_de_oferta\")\n  adorsRegAux.folio_oferta = parametros(\"RegistroCollection\")(0)(\"folio_oferta\")\n  adorsRegAux.folio_oferta_cupon = parametros(\"RegistroCollection\")(0)(\"folio_oferta_cupon\")\n  adorsRegAux.cupon_oferta_generar = parametros(\"RegistroCollection\")(0)(\"cupon_oferta_generar\")\n  adorsRegAux.productos_x_cupon  = parametros(\"RegistroCollection\")(0)(\"productos_x_cupon\")\n  adorsRegAux.cupon_oferta_recibido = parametros(\"RegistroCollection\")(0)(\"cupon_oferta_recibido\")\n  adorsRegAux.veces_cupon_recibido  = parametros(\"RegistroCollection\")(0)(\"veces_cupon_recibido\")\n  adorsRegAux.descuento_especial  = parametros(\"RegistroCollection\")(0)(\"descuento_especial\")\n  adorsRegAux.descuento_precio  = parametros(\"RegistroCollection\")(0)(\"descuento_precio\")\n  adorsRegAux.pago_puntos  = parametros(\"RegistroCollection\")(0)(\"pago_puntos\")\n  adorsRegAux.venta_prod_no_pesado  = parametros(\"RegistroCollection\")(0)(\"venta_prod_no_pesado\")\n  adorsRegAux.metro_kilos  = parametros(\"RegistroCollection\")(0)(\"metro_kilos\")\n  adorsRegAux.producto_digitado  = parametros(\"RegistroCollection\")(0)(\"producto_digitado\")\n  adorsRegAux.precio_digitado  = parametros(\"RegistroCollection\")(0)(\"precio_digitado\")\n  adorsRegAux.descuento_tecla  = parametros(\"RegistroCollection\")(0)(\"descuento_tecla\")\n  adorsRegAux.bascula_deshabilitada  = parametros(\"RegistroCollection\")(0)(\"bascula_deshabilitada\")\n  adorsRegAux.atributo_producto_1  = parametros(\"RegistroCollection\")(0)(\"atributo_producto_1\")\n  adorsRegAux.atributo_producto_2  = parametros(\"RegistroCollection\")(0)(\"atributo_producto_2\")\n  adorsRegAux.atributo_producto_2  = parametros(\"RegistroCollection\")(0)(\"atributo_producto_2\")\n  adorsRegAux.producto_marca_propia  = parametros(\"RegistroCollection\")(0)(\"producto_marca_propia\")\n  adorsRegAux.producto_cancelable  = parametros(\"RegistroCollection\")(0)(\"producto_cancelable\")\n  adorsRegAux.oferta_temporal  = parametros(\"RegistroCollection\")(0)(\"oferta_temporal\")\n  adorsRegAux.linea_complemento  = parametros(\"RegistroCollection\")(0)(\"linea_complemento\")\n  adorsRegAux.oferta_equivalente  = parametros(\"RegistroCollection\")(0)(\"oferta_equivalente\")\n  adorsRegAux.acepta_descuento_directo  = parametros(\"RegistroCollection\")(0)(\"acepta_descuento_directo\")\n  adorsRegAux.producto_acumula_puntos  = parametros(\"RegistroCollection\")(0)(\"producto_acumula_puntos\")\n  adorsRegAux.producto_devolvible  = parametros(\"RegistroCollection\")(0)(\"producto_devolvible\")\n  adorsRegAux.impresion_garantia  = parametros(\"RegistroCollection\")(0)(\"impresion_garantia\")\n  adorsRegAux.promocion_bancaria  = parametros(\"RegistroCollection\")(0)(\"promocion_bancaria\")\n  adorsRegAux.pago_promocion_bancaria  = parametros(\"RegistroCollection\")(0)(\"pago_promocion_bancaria\")\n  adorsRegAux.capturar_numero_serie  = parametros(\"RegistroCollection\")(0)(\"capturar_numero_serie\")\n  adorsRegAux.numero_serie = parametros(\"RegistroCollection\")(0)(\"numero_serie\")\n  adorsRegAux.codigo_familia  = parametros(\"RegistroCollection\")(0)(\"codigo_familia\")\n  adorsRegAux.codigo_valor  = parametros(\"RegistroCollection\")(0)(\"codigo_valor\")\n  adorsRegAux.concepto_venta_deptal  = parametros(\"RegistroCollection\")(0)(\"concepto_venta_deptal\")\n  adorsRegAux.puntos_adicionales  = parametros(\"RegistroCollection\")(0)(\"puntos_adicionales\")\n  adorsRegAux.promocion_tombola  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.oferta_cupones_1  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.oferta_cupones_2  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.oferta_cupones_3  = parametros(\"RegistroCollection\")(0)(\"no_nota\")\n  adorsRegAux.no_promocion  = parametros(\"RegistroCollection\")(0)(\"no_promocion\")\n  adorsRegAux.descripcion_promocion = parametros(\"RegistroCollection\")(0)(\"descripcion_promocion\")\n  adorsRegAux.no_servicio  = parametros(\"RegistroCollection\")(0)(\"no_servicio\")\n  adorsRegAux.concepto_1 = parametros(\"RegistroCollection\")(0)(\"concepto_1\")\n  adorsRegAux.concepto_2 = parametros(\"RegistroCollection\")(0)(\"concepto_2\")\n  adorsRegAux.concepto_3 = parametros(\"RegistroCollection\")(0)(\"concepto_3\")\n  adorsRegAux.cantidad_pagada  = parametros(\"RegistroCollection\")(0)(\"cantidad_pagada\")\n  adorsRegAux.fecha_servicio_original = parametros(\"RegistroCollection\")(0)(\"fecha_servicio_original\")\n  adorsRegAux.no_folio = parametros(\"RegistroCollection\")(0)(\"no_folio\")\n  adorsRegAux.nombre_cliente = parametros(\"RegistroCollection\")(0)(\"nombre_cliente\")\n  adorsRegAux.telefono = parametros(\"RegistroCollection\")(0)(\"telefono\")\n  adorsRegAux.fecha_apertura_2000 = parametros(\"RegistroCollection\")(0)(\"fecha_apertura_2000\")\n  adorsRegAux.fecha_abono_2000 = parametros(\"RegistroCollection\")(0)(\"fecha_abono_2000\")\n  adorsRegAux.fecha_liquidacion_2000 = parametros(\"RegistroCollection\")(0)(\"fecha_liquidacion_2000\")\n  adorsRegAux.fecha_vencimiento_2000 = parametros(\"RegistroCollection\")(0)(\"fecha_vencimiento_2000\")\n  adorsRegAux.tipo_abono  = parametros(\"RegistroCollection\")(0)(\"tipo_abono\")\n  adorsRegAux.monto_original  = parametros(\"RegistroCollection\")(0)(\"monto_original\")\n  adorsRegAux.importe_abono  = parametros(\"RegistroCollection\")(0)(\"importe_abono\")\n  adorsRegAux.saldo_actual  = parametros(\"RegistroCollection\")(0)(\"saldo_actual\")\n  adorsRegAux.importe_x_devolver  = parametros(\"RegistroCollection\")(0)(\"importe_x_devolver\")\n  adorsRegAux.importe_devuelto  = parametros(\"RegistroCollection\")(0)(\"importe_devuelto\")\n  adorsRegAux.importe_para_tienda  = parametros(\"RegistroCollection\")(0)(\"importe_para_tienda\")\n  adorsRegAux.no_tipo_pago  = parametros(\"RegistroCollection\")(0)(\"no_tipo_pago\")\n  adorsRegAux.cantidad_pago_me  = parametros(\"RegistroCollection\")(0)(\"cantidad_pago_me\")\n  adorsRegAux.cantidad_pago  = parametros(\"RegistroCollection\")(0)(\"cantidad_pago\")\n  adorsRegAux.tipo_de_cambio_pago  = parametros(\"RegistroCollection\")(0)(\"tipo_de_cambio_pago\")\n  adorsRegAux.no_concepto_pago  = parametros(\"RegistroCollection\")(0)(\"no_concepto_pago\")\n  adorsRegAux.concepto_1_pago = parametros(\"RegistroCollection\")(0)(\"concepto_1_pago\")\n  adorsRegAux.concepto_alterno_pago = parametros(\"RegistroCollection\")(0)(\"concepto_alterno_pago\")\n  adorsRegAux.concepto_2_pago = parametros(\"RegistroCollection\")(0)(\"concepto_2_pago\")\n  adorsRegAux.concepto_3_pago = parametros(\"RegistroCollection\")(0)(\"concepto_3_pago\")\n  adorsRegAux.no_funcion_especial  = parametros(\"RegistroCollection\")(0)(\"no_funcion_especial\")\n  adorsRegAux.importe_funcion_especial  = parametros(\"RegistroCollection\")(0)(\"importe_funcion_especial\")\n  adorsRegAux.sequencia = parametros(\"RegistroCollection\")(0)(\"sequencia\")",
+			"settings":
+			{
+				"buffer_size": 12684,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Private Sub txtNumero_LostFocus(Index As Integer)\n'manejador de errores\nOn Error GoTo McError\n\n    Dim intTipoBarra As Integer\n    Dim strPeso As String\n    Dim strDepto As String\n    Dim intComp As Integer\n    \n    If g_blnValidaSalir Or m_blnListadoActivo Then Exit Sub\n   \n    If m_blnOmiteLostFocusTmp Then\n        m_blnOmiteLostFocusTmp = False\n        Exit Sub\n    End If\n   \n    If Len(Trim$(txtNumero(Index).Text)) > 0 Then\n        'Cambiar el puntero del mouse\n        Me.MousePointer = C_MOUSE_TRABAJANDO\n        strBarra = Trim$(txtNumero(Index).Text)\n        If Len(strBarra) = 13 Then\n            'que no se haya capturado\n            If BuscaProdCapturado(Index) Then\n                g_blnValidaSalir = True\n                Call MC_Mensaje(\"La barra ya ha sido capturada\")\n                g_blnValidaSalir = False\n                Me.MousePointer = C_MOUSE_LISTO\n                txtNumero(Index).Text = vbNullString\n                If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                Exit Sub\n            End If\n            \n            m_strPrefijo = Mid(strBarra, 1, 2)\n            If m_strPrefijo = 28 Or m_strPrefijo = 21 Then\n                Call LeeConfBarra(strBarra, m_strPrefijo, strPeso, Index)\n                If strPeso = vbNullString And strNoProd = vbNullString Then\n                    If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                    Exit Sub\n                End If\n               \n                '<><><> buscar la mejor oferta\n                intComp = 1   'Inicializo en 1 por si es un reempaque...\n                Set adorsRegProd = clsProducto.LeerProductoBarras(strNoProd)\n                If Not adorsRegProd.BOF And Not adorsRegProd.EOF Then\n                    If cboOperacion.ListIndex = 1 Then\n                        strDepto = Trim$(CStr(adorsRegProd!no_depto)) & \",\"\n                        intComp = InStr(1, m_strDeptosReproceso, strDepto, vbTextCompare)\n                    End If\n                    If intComp > 0 Then\n                        Call ValidaProducto(strNoProd)\n                        txtDesc(Index).Text = strDescripProducto\n                        txtCantidad(Index).Text = strPeso\n                        txtPrecio(Index).Text = dblPrecioVenta\n                        Set adorsRegRend = clsRendimiento.LeerRegistroProducto(strNoProd)\n                        If Not adorsRegRend.BOF And Not adorsRegRend.EOF Then\n                            txtProdPadre(Index).Text = adorsRegRend!no_prod_padre\n                            strNoProdPadre = Trim$(adorsRegRend!no_prod_padre)\n                            Set adorsRegRend = clsRendimiento.LeerRegistroProducto(strNoProdPadre)\n                            If Not adorsRegRend.EOF Then\n                                curRendimiento = CCur(adorsRegRend!rendimiento)\n                                Set adorsRegProd = clsProducto.LeerProductoBarras(adorsRegRend!no_prod_padre)\n                                If adorsRegProd.BOF And adorsRegProd.EOF Then\n                                    txtProdPadre(Index).Text = \"\"\n                                End If\n                            Else\n                                g_blnValidaSalir = True\n                                Call MC_Mensaje(\"No se puede procesar barra, verificar rendimiento del producto.\")\n                                g_blnValidaSalir = False\n                                Me.MousePointer = C_MOUSE_LISTO\n                                txtNumero(Index).Text = vbNullString\n                                txtProd(Index).Text = vbNullString\n                                If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                                Exit Sub\n                            End If\n                        Else\n                            txtProdPadre(Index).Text = \"\"\n                        End If\n                    Else\n                        g_blnValidaSalir = True\n                        Call MC_Mensaje(\"El departamento del producto no esta autorizado para reproceso.\")\n                        g_blnValidaSalir = False\n                        Me.MousePointer = C_MOUSE_LISTO\n                        txtNumero(Index).Text = vbNullString\n                        txtProd(Index).Text = vbNullString\n                        If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                        Exit Sub\n                    End If\n                Else\n                    g_blnValidaSalir = True\n                    Call MC_Mensaje(\"No se encontro Producto\")\n                    g_blnValidaSalir = False\n                    Me.MousePointer = C_MOUSE_LISTO\n                    txtNumero(Index).Text = vbNullString\n                    txtProd(Index).Text = vbNullString\n                    If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                    Exit Sub\n                End If\n                \n                cmdLimpiar.Enabled = True\n                If g_blnArregloMenu(MantCatalogoProdReProcesoEmpaque, 1) = True Then cmdAceptar.Enabled = True\n                If (Index + 1) < MAX_ARREGLO_CAPTURA Then\n                    txtNumero(Index + 1).Enabled = True\n                    If txtNumero(Index + 1).Visible Then txtNumero(Index + 1).SetFocus\n                End If\n            Else\n                g_blnValidaSalir = True\n                Call MC_Mensaje(\"Prefijo de barra incorrecto\")\n                g_blnValidaSalir = False\n                Me.MousePointer = C_MOUSE_LISTO\n                txtNumero(Index).Text = vbNullString\n                If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n                Exit Sub\n            End If\n        Else\n            g_blnValidaSalir = True\n            Call MC_Mensaje(\"Longitud de barra incorrecta\")\n            g_blnValidaSalir = False\n            Me.MousePointer = C_MOUSE_LISTO\n            txtNumero(Index).Text = vbNullString\n            If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n            Exit Sub\n        End If\n    Else  'se queda ahi\n        If txtNumero(Index).Visible Then txtNumero(Index).SetFocus\n    End If\n   \n   If m_intNoArreglo = Index Then\n      'mostrar los siguientes 10\n      Call MuestraCapturaSiguiente\n      If (Index + 1) < MAX_ARREGLO_CAPTURA Then\n         If txtNumero(Index + 1).Visible Then _\n         txtNumero(Index + 1).SetFocus\n      Else\n         If cmdAceptar.Visible Then cmdAceptar.SetFocus\n      End If\n      'habilitar boton de navegacion\n      cmdUp.Enabled = True\n   End If\n   \n   If m_intPosActual <= Index Then\n      'pos. actual\n      m_intPosActual = Index\n   End If\n  'Reestablecer el puntero del mouse\n  Me.MousePointer = C_MOUSE_LISTO\n\nExit Sub\nMcErr",
+			"settings":
+			{
+				"buffer_size": 6681,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -225,70 +278,8 @@
 			"file": "client/src/app/services/user.service.ts",
 			"settings":
 			{
-				"buffer_size": 1912,
+				"buffer_size": 1881,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/components/user-edit.component.ts",
-			"settings":
-			{
-				"buffer_size": 864,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\n        If checaDevolTicket(m_strNota) = False Then\n            m_blnDevolTiquet = False\n\n            If m_blnEntrenamiento Then\n                MensajeO = \"Nota de devolución, consumos internos o entrenamiento, no se devuelven.\"\n                Accion = 0\n            End If\n\n            If m_blnDiasDevolExpirados Then\n                MensajeO = \"El tiempo válido para realizar la devolución ha expirado.\"\n                Accion = 0\n            End If\n\n            'mensaje de que no se encontro la nota...\n            MensajeO = \"No existe Nota de Venta.\"\n\n            'checar el parametro miscelaneo\n            If m_blnParamMisc61 Then\n                Accion = 0\n            End If\n\n            dictionary.Clear()\n            dictionary.Add(\"Mensaje\", MensajeO)\n            dictionary.Add(\"Accion\", Accion)\n            mensajejson = json.GetJSon(dictionary, \"mensaje\")\n            Return mensajejson\n\n            'Send Message and action\n        End If\n\n        'Checa si es una venta de tipo aire, si es asi verifica si la autorizo o no\n        If m_intTipoVenta = 11 Then\n            If checaTiempoAireAutorizado() = False Then\n\n                Accion = 0\n                dictionary.Clear()\n                dictionary.Add(\"Mensaje\", MensajeO)\n                dictionary.Add(\"Accion\", Accion)\n                mensajejson = json.GetJSon(dictionary, \"mensaje\")\n                Return mensajejson\n            End If\n        End Ifb",
-			"settings":
-			{
-				"buffer_size": 1435,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Gerardo/Desktop/Winsoc Cloud/Codigo nuevo dlls failed.vbs",
-			"settings":
-			{
-				"buffer_size": 51585,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\n\nDim RTtarjeta_credito As String\t \nDim RTno_nota As String\t\nDim RThora_venta As String\t\nDim RTno_cajero As String\t\nDim RTexpiracRTion As String\nDim RTtipo_transaccion As Integer\nDim RTcancelacion_transaccion As Integer\nDim RTnombre_tarjeta As String\nDim RTcaptura_manual As Integer\nDim RTaut_automatica As Integer|\nDim RTcantidad As Decimal\nDim RTsaldo As Decimal\nDim RTboletin_utilizado As String\nDim RTfecha_2000 As String\nDim RThora As String\nDim RTcaja_que_RTrecibio As Integer\nDim RTno_autorizacion As String\nDim RTno_lote As String\nDim RTfecha_deposito_2000 As String\nDim RTdescuento_especial As Integer\nDim RTpagare_cancelado As Integer\nDim tecla_pago As Integer\nDim RTno_banco As Integer\nDim RTtrack_1 As String\nDim RTtrack_2 As String\nDim RTsequencia As String\nDim RTident As String\n",
-			"settings":
-			{
-				"buffer_size": 793,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\nDim clsTransTar As clsMantTransTar\nDim clsFuncMisc As clsMantNotas\nDim intSegEsperar As Integer\nDim intTipoResp As Integer\nDim strResp As String\nDim strQuery As String\nDim strNoAutoriza As String\nDim strMensaje As String\n\n    m_strCodigo = vbNullString\n    m_strAutorizacion = vbNullString\n    strNoAutoriza = vbNullString\n    checaTiempoAireAutorizado = False\n    Set clsFuncMisc = New clsMantNotas\n    \n    intSegEsperar = 30\n    strQuery = \"select * from crtarctr_400 where no_protocolo = 77\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        intSegEsperar = adorsRegTar!tiempo_de_espera\n    End If\n    \n    strQuery = \"SELECT top 1 * FROM CRTRATAR_430 WHERE no_nota = '\" _\n        & m_strNota & \"' and trama_tipo_de_servicio = 77 and tipo_transaccion = 0 order by  ident desc\" 'and codigo_de_respuesta = 'N4'\"\n    Set adorsRegTar = clsFuncMisc.ejecutaQueryRS(strQuery)\n    If Not adorsRegTar.EOF Then\n        'Revisamos, SOLO los N4, timeout en POS\n        If Trim$(adorsRegTar!codigo_de_respuesta) = \"N4\" Then\n            'Instancia al prosa Syncrono ...\n            Set m_clsProsaSynTar = New clsProsaSync\n        \n            '////////////////////////////////////////////////\n            m_strMensajeTrama = GeneraMensajeProsa(\"\", Trim$(adorsRegTar!no_autorizacion))\n            intTipoResp = m_clsProsaSynTar.MCAutomatic(m_strParam196DirServidor, m_strParam136DirPuerto, intSegEsperar, m_strMensajeTrama, strResp)\n            '////////////////////////////////////////////////\n            \n            Call MDIfrmMain.DespliegaStatus(mtzDictionary.Translate(\"MSG_FAVOR_ESPERAR_MOMENTO\"))\n            'Procesa la respuesta de WinVisaNet\n            \n            m_strCodigo = Mid$(strResp, 1, 2)\n            m_strAutorizacion = Mid$(strResp, 3, 6)\n            If intTipoResp <> 0 Then\n                'No tuvimos respuesta del banco\n                strMensaje = \"La nota es recarga de T. Aire, sin conexion a winvisa, no se permite devolución.\"\n                Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                checaTiempoAireAutorizado = False\n                Select Case intTipoResp\n                    Case 1\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 1 Error Conexion \" & Trim$(m_strNota), Time)\n                    Case 2\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 2 Error Enviar \" & Trim$(m_strNota), Time)\n                    Case 3\n                        Call GrabaBitacoraLog(\"Respuesta Winvisa : 3 Error Recibir \" & Trim$(m_strNota), Time)\n                End Select\n            Else\n                If m_strCodigo = \"XX\" And Mid(m_strAutorizacion, 1, 2) = \"01\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< ERROR NO EXISTE CONEXION WINVISATIENDA....\"))\n                ElseIf m_strCodigo = \"EF\" And Mid(m_strAutorizacion, 1, 2) = \"02\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< NO EXISTE COMUNICACION WINVISA....\"))\n                ElseIf m_strCodigo = \"LC\" Then\n                    Call MC_Mensaje(mtzDictionary.Translate(\"< SUCURSAL SIN LICENCIA....\"))\n                ElseIf m_strCodigo = \"AA\" Then\n                    checaTiempoAireAutorizado = False\n                    strNoAutoriza = Trim$(Mid$(strResp, 35, 20))\n                    strMensaje = \"La recarga de T. Aire si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n                    Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                ElseIf ((m_strCodigo = \"M0\") Or (m_strCodigo = \"M7\")) Then\n                    checaTiempoAireAutorizado = True\n                    strNoAutoriza = Trim$(Mid$(strResp, 1, 45))\n                    Call GrabaBitacoraLog(\"T-AIRE Autorizado para devolverse. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                Else\n                    checaTiempoAireAutorizado = False\n                    'La operación fue rechazada por el banco\n                    Call MC_Mensaje(mtzDictionary.Translate(\"La nota es recarga de Tiempo Aire, Sin comunicación con TA. Blueweb, no se permite devolución.\"))\n                    Call GrabaBitacoraLog(\"T-AIRE Respuesta No Aut. : \" & strResp & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n                End If\n            End If\n        Else\n            checaTiempoAireAutorizado = False\n            If Trim$(adorsRegTar!codigo_de_respuesta) = \"AA\" Then\n                strNoAutoriza = Trim$(adorsRegTar!folio_proveedor_servicios)\n                strMensaje = \"La nota es recarga de T. Aire, si fue aprobada, no se permite devolución No. Aut. : \" & strNoAutoriza\n            Else\n                strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga no es N4\"\n            End If\n            Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n            Call GrabaBitacoraLog(\"T-AIRE No es codigo N4 : \" & strNoAutoriza & \" Tel: \" & Trim$(adorsRegTar!track_2) & \" Monto : \" & Trim$(CStr(adorsRegTar!cantidad)), Time)\n        End If   'N4\n    Else\n        checaTiempoAireAutorizado = False\n        strMensaje = \"La nota es recarga de T. Aire, No se pudo comprobar autorización de la recarga de T. Aire\"\n        Call MC_Mensaje(mtzDictionary.Translate(strMensaje))\n        Call GrabaBitacoraLog(\"T-AIRE, No se pudo leer CRTRATAR_430 \", Time)\n    End If  'Leer CRTRATAR_430\n    \n    'destruir\n    Set m_clsProsaSynTar = Nothing\n    Set clsFuncMisc = Nothing",
-			"settings":
-			{
-				"buffer_size": 5743,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/controllers/user.js",
-			"settings":
-			{
-				"buffer_size": 4044,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "'use strinct'\n\nvar jwt = require('jwt-simple');\nvar moment = require('moment');\nvar secret = 'Clave_secreta';\nconst dd = require('dump-die')\n\nexports.ensureAuth = function(req, res, next){\n\tif(!req.headers.authorization) {\n\t\treturn res.status(403).send({message: 'La peticion no tiene permisos'});\n\t}\n\telse{\n\t\tvar token = req.headers.authorization.replace(/['\"]+/g, '');\n\t\ttry{\n\t\t\tvar payload = jwt.decode(token, secret);\n\t\t\tif(payload.exp <= moment().unix() ){\n\t\t\t\treturn res.status(401).send({message: 'El token ha expirado'})\n\t\t\t}\n\t\t}catch(ex){\n\t\t\t//console.log(ex);\n\t\t\treturn res.status(403).send({message: 'El token no es valido'})\n\t\t}\n\t\treq.user = payload;\n\t\tnext();\n\t}\n};",
-			"file": "api/middlewares/authenticated.js",
-			"file_size": 704,
-			"file_write_time": 131714170901243080,
-			"settings":
-			{
-				"buffer_size": 678,
 				"line_ending": "Windows"
 			}
 		},
@@ -296,7 +287,7 @@
 			"file": "client/src/app/views/user-edit.html",
 			"settings":
 			{
-				"buffer_size": 1440,
+				"buffer_size": 1740,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -305,7 +296,7 @@
 			"file": "client/src/app/app.component.html",
 			"settings":
 			{
-				"buffer_size": 4111,
+				"buffer_size": 4130,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -314,7 +305,7 @@
 			"file": "client/src/app/app.routing.ts",
 			"settings":
 			{
-				"buffer_size": 484,
+				"buffer_size": 485,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -375,13 +366,17 @@
 		"/C/wamp64/www/curso-mean/client/src",
 		"/C/wamp64/www/curso-mean/client/src/app",
 		"/C/wamp64/www/curso-mean/client/src/app/components",
-		"/C/wamp64/www/curso-mean/client/src/app/services",
 		"/C/wamp64/www/curso-mean/client/src/app/views"
 	],
 	"file_history":
 	[
-		"/C/wamp64/www/curso-mean/client/node_modules/karma/scripts/karma-completion.sh",
+		"/Z/JORGE/SP_WinsocCloud/datatable.txt",
+		"/C/wamp64/www/curso-mean/client/node_modules/@angular-devkit/build-optimizer/node_modules/typescript/lib/lib.d.ts",
+		"/C/wamp64/www/curso-mean/client/node_modules/selenium-webdriver/lib/test/data/click_tests/submitted_page.html",
+		"/C/wamp64/www/curso-mean/api/middlewares/authenticated.js",
 		"/C/wamp64/www/curso-mean/api/controllers/user.js",
+		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Codigo nuevo dlls failed.vbs",
+		"/C/wamp64/www/curso-mean/client/node_modules/karma/scripts/karma-completion.sh",
 		"/C/wamp64/www/curso-mean/client/src/app/services/user.service.ts",
 		"/C/wamp64/www/curso-mean/api/controllers/album.js",
 		"/C/Users/Gerardo/Desktop/Winsoc Cloud/Stored Procedures/Consulta de productos/CLOUD_LEE_CPROD_PRODUCTO.sql",
@@ -502,12 +497,7 @@
 		"/C/laragon/www/blog/database/migrations/2018_02_14_224423_create_taggables_table.php",
 		"/C/laragon/www/blog/app/Tag.php",
 		"/C/laragon/www/blog/database/migrations/2018_02_14_220427_create_tags_table.php",
-		"/C/laragon/www/blog/resources/views/users/form.blade.php",
-		"/C/laragon/www/blog/resources/views/users/show.blade.php",
-		"/C/laragon/www/blog/resources/views/users/create.blade.php",
-		"/C/laragon/www/blog/resources/views/emails/contact.blade.php",
-		"/C/laragon/www/blog/config/mail.php",
-		"/C/laragon/www/blog/app/Providers/EventServiceProvider.php"
+		"/C/laragon/www/blog/resources/views/users/form.blade.php"
 	],
 	"find":
 	{
@@ -527,6 +517,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"no_nota\nhora_venta\nhora\nfecha_nota\nfecha_2000\nno_cajero\nno_supervisor\nno_seguridad\nfolio_control\nfolio_archivo\ntienda\ncaja\nno_linea\ntipo_de_operacion\ntipo_de_funcion\ntipo_de_registro\ncliente_distinguido\ntipo_de_transaccion\ntipo_de_venta\ntipo_precio_actual\nfuncion_actual\ncomposicion\nlinea_invalida\nlinea_suspendida\nlinea_consultada\nno_veces_impresa\ncantidad\ncantidad_devuelta\nno_producto\nno_generico\ndepto_destino\nno_depto\nno_familia\nno_especie\nno_impuesto\nimpuesto_especial\ndescripcion\ndescripcion_larga\ndescripcion_deptal\ndescripcion_oferta\ndescripcion_oferta_producto\ndescripcion_oferta_cupon\ndescripcion_transaccion\nprecio_costo\nprecio_unitario\nprecio_unitario_oferta\nprecio_unitario_ticket\nprecio_unitario_calculado\nprecio_unitario_original\nprecio_total\nprecio_total_devuelto\nimpuesto_venta\nimpuesto_esp_venta\ntg_ventas\ntg_impuestos_venta\ntg_impuestos_venta_esp\ntg_descuentos\ntg_impuestos_descuento\ntg_impuestos_descuento_esp\nporcentaje_descuento\nporcentaje_descuento_anterior\nmonto_descuento\nmonto_rebaja\nmonto_descuento_anterior\nmonto_rebaja_anterior\nimpacto_oferta\ncant_prod_en_oferta\nmonto_minimo_oferta\ntipo_de_oferta\nfolio_oferta\nfolio_oferta_cupon\ncupon_oferta_generar\nproductos_x_cupon\ncupon_oferta_recibido\nveces_cupon_recibido\ndescuento_especial\ndescuento_precio\npago_puntos\nventa_prod_no_pesado\nmetro_kilos\nproducto_digitado\nprecio_digitado\ndescuento_tecla\nbascula_deshabilitada\natributo_producto_1\natributo_producto_2\natributo_producto_3\nproducto_marca_propia\nproducto_cancelable\noferta_temporal\nlinea_complemento\noferta_equivalente\nacepta_descuento_directo\nproducto_acumula_puntos\nproducto_devolvible\nimpresion_garantia\npromocion_bancaria\npago_promocion_bancaria\ncapturar_numero_serie\nnumero_serie\ncodigo_familia\ncodigo_valor\nconcepto_venta_deptal\npuntos_adicionales\npromocion_tombola\noferta_cupones_1\noferta_cupones_2\noferta_cupones_3\nno_promocion\ndescripcion_promocion\nno_servicio\nconcepto_1\nconcepto_2\nconcepto_3\ncantidad_pagada\nfecha_servicio_original\nno_folio\nnombre_cliente\ntelefono\nfecha_apertura_2000\nfecha_abono_2000\nfecha_liquidacion_2000\nfecha_vencimiento_2000\ntipo_abono\nmonto_original\nimporte_abono\nsaldo_actual\nimporte_x_devolver\nimporte_devuelto\nimporte_para_tienda\nno_tipo_pago\ncantidad_pago_me\ncantidad_pago\ntipo_de_cambio_pago\nno_concepto_pago\nconcepto_1_pago\nconcepto_alterno_pago\nconcepto_2_pago\nconcepto_3_pago\nno_funcion_especial\nimporte_funcion_especial\nsequencia",
+			"tipo_de_cambio_pago",
+			"no_funcion_especial",
+			"no_nota",
 			");",
 			"adorsRegTar",
 			"CLOUD_LEE_CPROD_PRODUCTO",
@@ -644,7 +638,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -653,15 +647,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 626,
+						"buffer_size": 627,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								479,
-								479
+								627,
+								627
 							]
 						],
 						"settings":
@@ -681,11 +675,138 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "client/src/app/components/user-edit.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								698,
+								698
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3947,
+								3947
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\wamp64\\www\\curso-mean\\client\\src\\app\\components",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2250.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12684,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\wamp64\\www\\curso-mean\\client\\src\\app\\components",
+							"syntax": "Packages/VBScript/VBScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6681,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6681,
+								6681
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VBScript/VBScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2186.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "client/src/app/app.component.ts",
 					"semi_transient": false,
 					"settings":
@@ -697,8 +818,8 @@
 						"selection":
 						[
 							[
-								824,
-								842
+								2073,
+								2060
 							]
 						],
 						"settings":
@@ -715,27 +836,27 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 978.0,
+						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 6,
 					"file": "client/src/app/services/user.service.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1912,
+						"buffer_size": 1881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								307,
+								307
 							]
 						],
 						"settings":
@@ -751,67 +872,6 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 384.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/src/app/components/user-edit.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								864,
-								864
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 76.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1435,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								320,
-								320
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"default_dir": "C:\\wamp64\\www\\curso-mean\\client\\src\\app\\components",
-							"syntax": "Packages/VBScript/VBScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -819,165 +879,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/Users/Gerardo/Desktop/Winsoc Cloud/Codigo nuevo dlls failed.vbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 51585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								975,
-								975
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/VBScript/VBScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 343.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 793,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								464,
-								464
-							]
-						],
-						"settings":
-						{
-							"default_dir": "C:\\Users\\Gerardo\\Desktop\\Winsoc Cloud",
-							"syntax": "Packages/VBScript/VBScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 7,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5743,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								656,
-								656
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"default_dir": "C:\\wamp64\\www\\curso-mean",
-							"syntax": "Packages/VBScript/VBScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 192.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "api/controllers/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4044,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2336,
-								2336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1248.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "api/middlewares/authenticated.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								405,
-								405
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "client/src/app/views/user-edit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1440,
+						"buffer_size": 1740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1295,
-								1295
+								1241,
+								1241
 							]
 						],
 						"settings":
@@ -986,27 +901,27 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 208.0,
+						"translation.y": 281.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 8,
 					"file": "client/src/app/app.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4111,
+						"buffer_size": 4130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2342,
-								4090
+								514,
+								527
 							]
 						],
 						"settings":
@@ -1015,27 +930,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1197.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 9,
 					"file": "client/src/app/app.routing.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 484,
+						"buffer_size": 485,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								190,
-								190
+								485,
+								485
 							]
 						],
 						"settings":
@@ -1048,7 +963,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1106,6 +1021,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"onSubmit",
+				"curso-mean\\client\\node_modules\\selenium-webdriver\\lib\\test\\data\\click_tests\\submitted_page.html"
+			],
 			[
 				"route",
 				"node_modules\\color-convert\\route.js"
@@ -1487,7 +1406,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 243.0,
+	"side_bar_width": 255.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
